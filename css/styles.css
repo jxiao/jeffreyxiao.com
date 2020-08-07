@@ -1,6 +1,5 @@
 
 /* General / Text Styling */
-
 body {
   background-color: #fafbfc;
 }
@@ -21,11 +20,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container-fluid {
-  padding: 3% 15% 7%;
+  padding: 3% 15% 3%;
 }
 
 .section-title {
   text-align: center;
+  margin-bottom: 3%;
 }
 
 .centeredFA {
@@ -45,11 +45,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .intro-text {
   margin: auto;
+  font-size: 50%;
 }
 
 .circle-img {
   border-radius: 50%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 
@@ -65,6 +66,17 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.3rem;
   font-weight: bold;
 }
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #1817A2;
+  /* RED COLOR: #dc525e */
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:hover {
+  color: #1817A2;
+}
+
+
 
 .nav-item {
   padding: 0 18px;
@@ -122,4 +134,87 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-icon {
   margin: 10px 10px 10px;
+}
+
+@media (max-width: 1220px) {
+  .intro-img {
+    position: static;
+    text-align: center;
+    margin: auto;
+  }
+  .intro-text {
+    position: static;
+    margin: 10px 25% auto;
+    text-align: initial;
+  }
+}
+
+
+/* Project Section */
+
+.project-img {
+  background-color: #fafbfc;
+  overflow: hidden;
+  object-fit: scale-down;
+}
+
+/* Skills Section */
+/* Reference: https://stackoverflow.com/questions/17565953/representing-folder-hierarchy-with-html */
+
+#hierarchyGeneral, #hierarchyWeb, #hierarchyDatabase
+{
+    font-family: Hack;
+    font-size: 1.25rem;
+    width: 300px;
+}
+.foldercontainer, .file, .noitems
+{
+    display: block;
+    padding: 5px 5px 5px 50px;
+}
+.folder
+{
+    cursor: pointer;
+}
+.noitems
+{
+    display: none;
+    pointer-events: none;
+}
+.folder:hover,.file:hover
+{
+    background: #dde1e4;
+}
+.folder:before, .file:before
+{
+    padding-right: 10px;
+}
+
+
+/* Education */
+.penn-logo {
+  max-width: 75%;
+}
+
+figure, figcaption {
+  text-align: center;
+  font-family: Hack, monospace;
+}
+
+figcaption {
+  margin-top: 10px;
+}
+
+.carousel {
+  margin: auto;
+}
+
+.carousel-img {
+  object-fit: scale-down;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  filter: invert(50%)
 }
