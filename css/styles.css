@@ -248,13 +248,16 @@ figcaption {
 }
 
 .carousel {
-  margin: auto;
+  background-color: var(--bg);
+  overflow: none;
+  object-fit: scale-down;
+  max-height: 100%;
 }
 
 .carousel-img {
+  width: auto;
+  height: 300px;
   object-fit: scale-down;
-  overflow: hidden;
-  max-height: 100%;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
