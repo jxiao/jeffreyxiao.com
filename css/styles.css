@@ -1,10 +1,28 @@
 
 /* General / Text Styling */
-body {
-  background-color: #fafbfc;
+html {
+  overflow-x: hidden;
+  --bg: #fafbfc;
+  --color-navbar: #1817A2;
+  --color-text: #000000;
+  --color-skills-hover: #dde1e4;
+  --opposite-bg-color: #022b36;
 }
 
-h1, h2, h3, h4, h5, h6 {
+html[data-theme='dark'] {
+  --bg: #022b36;
+  --color-navbar: #268bd2;
+  --color-text: #fafbfc;
+  --color-skills-hover: #121212;
+  --opposite-bg-color: #fafbfc;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: var(--color-text);
   font-family: Hack, monospace;
 }
 
@@ -30,7 +48,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .centeredFA {
   opacity: 20%;
+  color: var(--color-text);
   margin: auto;
+}
+
+.clickableIcon:hover {
+  transform: scale(1.3);
+}
+
+.bottom-right-toggle {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
 }
 
 /* Introduction */
@@ -67,13 +97,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: var(--opposite-bg-color);
+}
+
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #1817A2;
+  color: var(--color-navbar);
   /* RED COLOR: #dc525e */
 }
 
 .navbar-light .navbar-brand, .navbar-light .navbar-brand:hover {
-  color: #1817A2;
+  color: var(--color-navbar);
 }
 
 
@@ -158,6 +192,10 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: scale-down;
 }
 
+.card-text, .card-title {
+  color: #000000;
+}
+
 /* Skills Section */
 /* Reference: https://stackoverflow.com/questions/17565953/representing-folder-hierarchy-with-html */
 
@@ -176,6 +214,10 @@ h1, h2, h3, h4, h5, h6 {
 {
     cursor: pointer;
 }
+
+.folder, .file {
+  color: var(--color-text);
+}
 .noitems
 {
     display: none;
@@ -183,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .folder:hover,.file:hover
 {
-    background: #dde1e4;
+    background: var(--color-skills-hover);
 }
 .folder:before, .file:before
 {
@@ -217,4 +259,66 @@ figcaption {
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
   filter: invert(50%)
+}
+
+
+
+
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: var(--bg);
+	border-radius: 90px;
+	transition: 0.3s;
+}
+input + label {
+  background: #022b36;
+}
+
+input:checked + label {
+	background: #fafbfc;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
+}
+
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+.light-dark-theme-toggler-icon {
+  color: var(--opposite-bg-color);
 }
