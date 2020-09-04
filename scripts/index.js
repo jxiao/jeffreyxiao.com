@@ -33,22 +33,20 @@ document.getElementById("hierarchyDatabase").addEventListener("click", hideShowE
 
 function hideShowEvent(event){
   var elem = event.target;
-  if(elem.tagName.toLowerCase() == "span" && elem !== event.currentTarget)
-  {
-      var type = elem.classList.contains("folder") ? "folder" : "file";
-      if(type=="folder")
-      {
-          var isexpanded = elem.dataset.isexpanded=="true";
-          elem.dataset.isexpanded = !isexpanded;
+  if (elem.tagName.toLowerCase() == "span" && elem !== event.currentTarget) {
+    var type = elem.classList.contains("folder") ? "folder" : "file";
+    if (type=="folder") {
+        var isexpanded = elem.dataset.isexpanded=="true";
+        elem.dataset.isexpanded = !isexpanded;
 
-          var toggleelems = [].slice.call(elem.parentElement.children);
-          var classnames = "file,foldercontainer,noitems".split(",");
+        var toggleelems = [].slice.call(elem.parentElement.children);
+        var classnames = "file,foldercontainer,noitems".split(",");
 
-          toggleelems.forEach(function(element){
-              if(classnames.some(function(val){return element.classList.contains(val);}))
-              element.style.display = isexpanded ? "none":"block";
-          });
-      }
+        toggleelems.forEach(function(element){
+            if(classnames.some(function(val){return element.classList.contains(val);}))
+            element.style.display = isexpanded ? "none":"block";
+        });
+    }
   }
 }
 
@@ -86,7 +84,7 @@ function onloadEvents() {
 // Carousel Height
 function setCarouselHeight() {
     var pennHeight = document.getElementById('pennInfo').clientHeight;
-    document.getElementById("carouselExampleIndicators").style.maxHeight = `${pennHeight}px`;
+    document.getElementById("activities").style.maxHeight = `${pennHeight}px`;
 
     var lst = document.getElementsByClassName("carousel-img");
     for (var i = 0; i < lst.length; i++) {
