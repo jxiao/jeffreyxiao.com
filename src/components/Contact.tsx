@@ -1,9 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { M1, device } from "../constants/measurements"
+import emailjs from "emailjs-com"
 
 import GitHubIcon from "./icons/GitHub"
 import LinkedInIcon from "./icons/LinkedIn"
+var Recaptcha = require("react-recaptcha")
 
 const ContactContainer = styled.div`
   display: flex;
@@ -37,6 +39,10 @@ const ContentSubmitContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: ${M1};
+
+  @media (max-width: 1550px) {
+    flex-direction: column;
+  }
 `
 
 const SubjectInput = styled.input`
@@ -46,10 +52,23 @@ const SubjectInput = styled.input`
 const ContentArea = styled.textarea`
   flex-grow: 1;
   resize: none;
+  @media (max-width: 1550px) {
+    margin-bottom: ${M1};
+  }
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: ${M1};
 `
 
 const SubmitButton = styled.button`
-  margin-left: ${M1};
+  flex-grow: 1;
+  width: 100%;
+  margin-top: ${M1};
 `
 
 const IconContainer = styled.div`
@@ -73,6 +92,7 @@ interface EmailState {
   email: string
   subject: string
   content: string
+  isVerified: boolean
 }
 
 class Contact extends React.Component<{}, EmailState> {
@@ -83,7 +103,30 @@ class Contact extends React.Component<{}, EmailState> {
       email: "",
       subject: "",
       content: "",
+      isVerified: false,
     }
+
+    this.recaptchaLoaded = this.recaptchaLoaded.bind(this)
+  }
+
+  sendEmail(e: any) {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        "service_zetya4i",
+        "template_aswfhew",
+        e.target,
+        "user_d4ui4aQoxvohdx9Xls1mT"
+      )
+      .then(
+        result => {
+          console.log(result.text)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
   }
 
   validateEmail(email: string) {
@@ -93,14 +136,19 @@ class Contact extends React.Component<{}, EmailState> {
 
   handleSubmit(e: any) {
     e.preventDefault()
-    if (this.validateEmail(this.state.email)) {
+    if (this.state.isVerified && this.validateEmail(this.state.email)) {
       console.log(this.state)
+      this.sendEmail(e)
       this.setState({
         email: "",
         subject: "",
         content: "",
       })
     }
+  }
+
+  recaptchaLoaded() {
+    console.log("recaptcha loaded.")
   }
 
   render() {
@@ -110,7 +158,7 @@ class Contact extends React.Component<{}, EmailState> {
           <EmailContainer>
             <input
               type="text"
-              placeholder="Your Email"
+              placeholder="Your Email (required)"
               name="email"
               value={this.state.email}
               required
@@ -139,7 +187,14 @@ class Contact extends React.Component<{}, EmailState> {
               value={this.state.content}
               onChange={e => this.setState({ content: e.target.value })}
             />
-            <SubmitButton type="submit">SEND</SubmitButton>
+            <ButtonContainer>
+              <Recaptcha
+                sitekey="6LccHxsaAAAAAJgecarWRWIXIyD-vDA4FfDgDsCU"
+                render="explicit"
+                onloadCallback={this.recaptchaLoaded}
+              />
+              <SubmitButton type="submit">SEND</SubmitButton>
+            </ButtonContainer>
           </ContentSubmitContainer>
         </FormContainer>
         <IconContainer>
