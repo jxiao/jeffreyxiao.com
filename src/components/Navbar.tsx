@@ -69,11 +69,6 @@ const Navbar = () => {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
-  const toggleNav = () => {
-    console.log("toggling nav")
-  }
-
-  window.addEventListener("resize", toggleNav)
 
   const data = useStaticQuery(graphql`
     query {
