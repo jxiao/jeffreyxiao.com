@@ -29,7 +29,7 @@ const EntrySubtitle = styled.p`
   margin: 0;
 `
 
-const EntryContent = styled.p<{}>`
+const EntryContent = styled.div<{}>`
   li {
     margin-bottom: 0rem;
     overflow-wrap: normal;
@@ -53,7 +53,9 @@ const Entry = ({ title, image, subtitle, content }: EntryProps) => {
       <EntryText>
         <EntryTitle>{title}</EntryTitle>
         <EntrySubtitle>{subtitle}</EntrySubtitle>
-        <EntryContent dangerouslySetInnerHTML={{ __html: content }} />
+        <EntryContent
+          dangerouslySetInnerHTML={{ __html: `<div>${content}</div>` }}
+        />
       </EntryText>
     </EntryContainer>
   )
