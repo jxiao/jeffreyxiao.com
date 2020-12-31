@@ -54,12 +54,15 @@ const Experience = () => {
   return (
     <>
       {(edges as ExperienceNode[]).map(
-        ({
-          node: {
-            html,
-            frontmatter: { start, end, company, title, image, location },
+        (
+          {
+            node: {
+              html,
+              frontmatter: { start, end, company, title, image, location },
+            },
           },
-        }) => {
+          i
+        ) => {
           const fluid = image?.childImageSharp?.fluid
 
           const mergedTitle = [title, company].filter(Boolean).join(", ")
@@ -67,14 +70,17 @@ const Experience = () => {
             .filter(Boolean)
             .join(" --- ")
 
+          // NOTE: SKIP THE FIRST EXPERIENCE HERE
           return (
-            <Entry
-              key={mergedTitle}
-              title={mergedTitle}
-              image={fluid}
-              subtitle={subtitle}
-              content={html}
-            />
+            i != 0 && (
+              <Entry
+                key={mergedTitle}
+                title={mergedTitle}
+                image={fluid}
+                subtitle={subtitle}
+                content={html}
+              />
+            )
           )
         }
       )}

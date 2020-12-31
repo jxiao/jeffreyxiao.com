@@ -141,6 +141,17 @@ const Burger = () => {
         </li>
         <li>
           <SectionIndividual
+            to="/#skills"
+            onClick={e => {
+              setOpen(false)
+              e.stopPropagation()
+            }}
+          >
+            skills
+          </SectionIndividual>
+        </li>
+        <li>
+          <SectionIndividual
             to="/#contact"
             onClick={e => {
               setOpen(false)
