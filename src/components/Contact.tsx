@@ -5,7 +5,7 @@ import emailjs from "emailjs-com"
 
 import GitHubIcon from "./icons/GitHub"
 import LinkedInIcon from "./icons/LinkedIn"
-var Recaptcha = require("react-recaptcha")
+// var Recaptcha = require("react-recaptcha")
 
 const ContactContainer = styled.div`
   display: flex;
@@ -40,9 +40,9 @@ const ContentSubmitContainer = styled.div`
   justify-content: space-between;
   margin-bottom: ${M1};
 
-  @media (max-width: 1550px) {
-    flex-direction: column;
-  }
+  // @media (max-width: 1550px) {
+  //   flex-direction: column;
+  // }
 `
 
 const SubjectInput = styled.input`
@@ -52,23 +52,21 @@ const SubjectInput = styled.input`
 const ContentArea = styled.textarea`
   flex-grow: 1;
   resize: none;
-  @media (max-width: 1550px) {
-    margin-bottom: ${M1};
-  }
+  // @media (max-width: 1550px) {
+  //   margin-bottom: ${M1};
+  // }
 `
 
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-left: ${M1};
-`
+// const ButtonContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-evenly;
+//   align-items: center;
+//   margin-left: ${M1};
+// `
 
 const SubmitButton = styled.button`
-  flex-grow: 1;
-  width: 100%;
-  margin-top: ${M1};
+  margin-left: ${M1};
 `
 
 const IconContainer = styled.div`
@@ -136,7 +134,8 @@ class Contact extends React.Component<{}, EmailState> {
 
   handleSubmit(e: any) {
     e.preventDefault()
-    if (this.state.isVerified && this.validateEmail(this.state.email)) {
+    // this.state.isVerified &&
+    if (this.validateEmail(this.state.email)) {
       console.log(this.state)
       this.sendEmail(e)
       this.setState({
@@ -187,14 +186,14 @@ class Contact extends React.Component<{}, EmailState> {
               value={this.state.content}
               onChange={e => this.setState({ content: e.target.value })}
             />
-            <ButtonContainer>
-              <Recaptcha
+            {/* <ButtonContainer> */}
+            {/* <Recaptcha
                 sitekey="6LccHxsaAAAAAJgecarWRWIXIyD-vDA4FfDgDsCU"
                 render="explicit"
                 onloadCallback={this.recaptchaLoaded}
-              />
-              <SubmitButton type="submit">SEND</SubmitButton>
-            </ButtonContainer>
+              /> */}
+            <SubmitButton type="submit">SEND</SubmitButton>
+            {/* </ButtonContainer> */}
           </ContentSubmitContainer>
         </FormContainer>
         <IconContainer>
