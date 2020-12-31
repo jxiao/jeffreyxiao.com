@@ -1,4 +1,4 @@
-# Personal Website (jeffreyxiao.com)
+# Personal Website ([jeffreyxiao.com](jeffreyxiao.com))
 
 ### Tech Stack
 
