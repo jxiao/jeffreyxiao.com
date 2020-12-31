@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -38,7 +38,7 @@ module.exports = {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 1024,
-              linkImagesToOrignal: false,
+              // linkImagesToOrignal: false,
             },
           },
         ],
