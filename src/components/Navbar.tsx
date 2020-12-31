@@ -4,6 +4,8 @@ import styled, { keyframes } from "styled-components"
 
 import { M2, M3, M4, device } from "../constants/measurements"
 import { MEDIUM_FONT_WEIGHT, BOLD_FONT_WEIGHT } from "../constants/fonts"
+import Burger from "./Burger"
+import NavLinks from "./NavLinks"
 
 const Header = styled.header`
   display: flex;
@@ -45,24 +47,6 @@ const Title = styled(Link)`
   }
 `
 
-const SectionList = styled.ul`
-  display: flex;
-  list-style-type: none;
-  margin: ${M2};
-
-  @media ${device.tablet} {
-    display: none;
-  }
-`
-
-const SectionIndividual = styled(Link)`
-  text-decoration: none;
-  font-size: ${M3};
-  font-weight: ${MEDIUM_FONT_WEIGHT};
-  margin-right: ${M2};
-  color: #404040;
-`
-
 const MenuIcon = styled.div``
 
 const Navbar = () => {
@@ -85,28 +69,7 @@ const Navbar = () => {
         {data.site.siteMetadata.navTitle}
       </Title>
       <nav>
-        <SectionList>
-          <li>
-            <SectionIndividual to="/#projects" onClick={closeMobileMenu}>
-              projects
-            </SectionIndividual>
-          </li>
-          <li>
-            <SectionIndividual to="/#education" onClick={closeMobileMenu}>
-              education
-            </SectionIndividual>
-          </li>
-          <li>
-            <SectionIndividual to="/#experience" onClick={closeMobileMenu}>
-              experience
-            </SectionIndividual>
-          </li>
-          <li>
-            <SectionIndividual to="/#contact" onClick={closeMobileMenu}>
-              contact
-            </SectionIndividual>
-          </li>
-        </SectionList>
+        <Burger />
       </nav>
     </Header>
   )
