@@ -4,7 +4,7 @@ end: "Present"
 company: "UPenn"
 title: "Teaching Assistant: CIS120"
 location: "Philadelphia, PA"
-image: "../../images/upenn-120ta.png"
+image: "../../images/upenn.png"
 order: 2
 ---
 

@@ -2,6 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
+import { device } from "../constants/measurements"
 
 const IMG_SIZE = "12.5rem"
 
@@ -10,6 +11,12 @@ const HeroSection = styled.div`
   flex-direction: row;
   justify-content: center;
   text-align: center;
+  margin-bottom: 1rem;
+
+  @media ${device.phone} {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const HeadshotWrapper = styled.div<{}>`
@@ -33,7 +40,7 @@ const Hero = () => {
         file(relativePath: { eq: "jeffreyxiao.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 256) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }

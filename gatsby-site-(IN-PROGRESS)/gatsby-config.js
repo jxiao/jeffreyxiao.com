@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Jeffrey Xiao`,
+    navTitle: `~/jeffreyxiao$`,
     description: `CS student passionate about making change with code`,
     author: `Jeffrey Xiao <jeffrey.xiao1@gmail.com>`,
     siteUrl: "https://www.jeffreyxiao.com",
@@ -19,13 +20,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `jeffreyxiao.com`,
+        short_name: `jeffreyxiao.com`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -41,6 +42,13 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

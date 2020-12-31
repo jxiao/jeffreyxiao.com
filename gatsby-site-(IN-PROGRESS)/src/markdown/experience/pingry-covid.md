@@ -4,7 +4,7 @@ end: "September 2020"
 company: "The Pingry School"
 title: "Full-Stack Web Developer"
 location: "Basking Ridge, NJ"
-image: "../../images/pingry-covid.png"
+image: "../../images/pingry.png"
 order: 3
 ---
 

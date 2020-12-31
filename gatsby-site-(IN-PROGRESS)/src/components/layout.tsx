@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Navbar from "./Navbar"
-import Footer from "../components/Footer"
+import Footer from "./Footer"
 import "./layout.css"
 import { FONT } from "../constants/fonts"
 
