@@ -27,8 +27,8 @@ const OCamlIcon = ({ height, width = "auto" }: OCamlProps) => {
           gradientTransform="translate(758 113.28)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#f29104" />
-          <stop offset="1" stop-color="#ec6813" />
+          <stop offset="0" stopColor="#f29104" />
+          <stop offset="1" stopColor="#ec6813" />
         </linearGradient>
         <linearGradient
           id="IconifyId-176bad8e0e6-b8e428-13"

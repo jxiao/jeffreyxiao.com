@@ -50,10 +50,6 @@ const Title = styled(Link)`
 const MenuIcon = styled.div``
 
 const Navbar = () => {
-  const [click, setClick] = useState(false)
-  const handleClick = () => setClick(!click)
-  const closeMobileMenu = () => setClick(false)
-
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -65,9 +61,7 @@ const Navbar = () => {
   `)
   return (
     <Header>
-      <Title to="/" onClick={closeMobileMenu}>
-        {data.site.siteMetadata.navTitle}
-      </Title>
+      <Title to="/">{data.site.siteMetadata.navTitle}</Title>
       <nav>
         <Burger />
       </nav>

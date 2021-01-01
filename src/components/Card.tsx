@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { FluidObject } from "gatsby-image"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { BOLD_FONT_WEIGHT } from "../constants/fonts"
 import { M1, M2, M3, M4, M5, M6 } from "../constants/measurements"
 import { device } from "../constants/measurements"
+import Modal from "./Modal"
 
 const CardContainer = styled.div`
   display: flex;
@@ -26,6 +27,8 @@ const CardTitle = styled.p`
   font-weight: ${BOLD_FONT_WEIGHT};
   font-size: ${M3};
   margin: 0;
+  flex-direction: row;
+  flex-grow: 0;
 `
 
 const CardSubtitle = styled.p`
@@ -57,6 +60,11 @@ interface CardProps {
   // Boolean indicating whether image is on left (text on right)
   left_image?: boolean
   aspect_ratio: number
+  html: string
+  link: string
+  repo: string
+  tech: string[]
+  collaborators: string[]
 }
 
 const Card = ({
@@ -67,6 +75,11 @@ const Card = ({
   footer,
   left_image = true,
   aspect_ratio,
+  html,
+  link,
+  repo,
+  tech,
+  collaborators,
 }: CardProps) => {
   const IMG_SIZE = "15rem"
 
@@ -74,10 +87,16 @@ const Card = ({
   const width = aspect_ratio < 1 ? "15rem" : IMG_SIZE
   const height = aspect_ratio < 1 ? "10rem" : "auto"
 
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = () => {
+    setShowModal(prev => !prev)
+  }
+
   return (
     <CardContainer>
       {left_image && (
-        <div>
+        <div onClick={openModal}>
           <Img
             fluid={image}
             style={{
@@ -89,7 +108,20 @@ const Card = ({
         </div>
       )}
       <CardText>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle onClick={openModal}>{title}</CardTitle>
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          title={title}
+          image={image}
+          subtitle={subtitle}
+          content={content}
+          tech={tech}
+          html={html}
+          link={link}
+          repo={repo}
+          collaborators={collaborators}
+        />
         <CardSubtitle>{subtitle}</CardSubtitle>
         <CardContent>{content}</CardContent>
         <CardFooter>{footer}</CardFooter>

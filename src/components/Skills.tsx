@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { M1, M2, M3, M4, M5, device } from "../constants/measurements"
+import { M5 } from "../constants/measurements"
+
+// Icons
 import TypeScriptIcon from "./icons/TypeScript"
 import JavaIcon from "./icons/Java"
 import OCamlIcon from "./icons/OCaml"
@@ -58,16 +60,12 @@ const Skills = () => {
       <Group>
         <H4>General</H4>
         <Skill>
-          <TypeScriptIcon height={M5} />
-          <P>TypeScript</P>
-        </Skill>
-        <Skill>
           <JavaIcon height={M5} />
           <P>Java</P>
         </Skill>
         <Skill>
-          <OCamlIcon height={M5} />
-          <P>OCaml</P>
+          <TypeScriptIcon height={M5} />
+          <P>TypeScript</P>
         </Skill>
         <Skill>
           <PythonIcon height={M5} />
@@ -76,6 +74,10 @@ const Skills = () => {
         <Skill>
           <CIcon height={M5} />
           <P>C</P>
+        </Skill>
+        <Skill>
+          <OCamlIcon height={M5} />
+          <P>OCaml</P>
         </Skill>
       </Group>
       <Group>

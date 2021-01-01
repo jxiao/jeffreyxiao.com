@@ -5,7 +5,7 @@ interface TypeScriptProps {
   width?: string
 }
 
-const TypeScriptIcon = ({ height, width = "auto" }: TypeScriptProps) => {
+const TypeScriptIcon = ({ height }: TypeScriptProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

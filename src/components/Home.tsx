@@ -26,8 +26,26 @@ const SectionWrapper = styled.section`
   }
 `
 
-const SectionTitle = styled.h3`
+const SectionHeader = styled.div`
   margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+`
+
+const SectionTitle = styled.h3`
+  margin-bottom: 0;
+`
+
+const SectionSubtitle = styled.p`
+  font-size: 12px;
+  color: #807878;
+  margin-bottom: 0;
+  display: flex;
+  flex-grow: 1;
+  margin-left: 0.5rem;
+  flex-direction: column-reverse;
+  padding-top: 5px;
 `
 
 const HR = styled.hr`
@@ -46,13 +64,18 @@ const Section = ({
   title,
   children,
   id,
+  subtitle,
 }: {
   title: string
   children: React.ReactNode | React.ReactNodeArray
   id: string
+  subtitle?: string
 }): React.ReactElement => (
   <SectionWrapper id={id}>
-    <SectionTitle>{title}</SectionTitle>
+    <SectionHeader>
+      <SectionTitle>{title}</SectionTitle>
+      <SectionSubtitle>{subtitle}</SectionSubtitle>
+    </SectionHeader>
     <HR />
     {children}
   </SectionWrapper>
@@ -62,7 +85,11 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Section title={"Projects"} id={"projects"}>
+      <Section
+        title={"Projects"}
+        id={"projects"}
+        subtitle={"(click for additional info)"}
+      >
         <Projects />
       </Section>
       <Section title={"Education"} id={"education"}>

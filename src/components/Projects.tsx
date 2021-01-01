@@ -81,7 +81,9 @@ const Projects = () => {
         ) => {
           const fluid = image?.childImageSharp?.fluid
 
-          const subtitle = [start && end && `${start} - ${end}`]
+          const subtitle = [
+            start && end && (start != end ? `${start} - ${end}` : `${start}`),
+          ]
             .filter(Boolean)
             .join("")
 
@@ -96,8 +98,13 @@ const Projects = () => {
               subtitle={subtitle}
               content={description}
               footer={stack}
+              tech={tech_stack}
               left_image={true} //{index % 2 == 0}  // <-- enable left and right
               aspect_ratio={fluid.aspectRatio}
+              html={html}
+              link={link}
+              repo={repo}
+              collaborators={collaborators}
             />
           )
         }

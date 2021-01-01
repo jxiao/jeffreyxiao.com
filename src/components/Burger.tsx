@@ -110,6 +110,8 @@ const Burger = () => {
           <SectionIndividual
             to="/#projects"
             onClick={e => {
+              // e && e.preventDefault()
+              // document.getElementById("projects").scrollIntoView()
               setOpen(false)
               e.stopPropagation()
             }}
@@ -121,6 +123,8 @@ const Burger = () => {
           <SectionIndividual
             to="/#education"
             onClick={e => {
+              // e && e.preventDefault()
+              // document.getElementById("education").scrollIntoView()
               setOpen(false)
               e.stopPropagation()
             }}
@@ -132,6 +136,8 @@ const Burger = () => {
           <SectionIndividual
             to="/#experience"
             onClick={e => {
+              // e && e.preventDefault()
+              // document.getElementById("experience").scrollIntoView()
               setOpen(false)
               e.stopPropagation()
             }}
@@ -143,6 +149,8 @@ const Burger = () => {
           <SectionIndividual
             to="/#skills"
             onClick={e => {
+              // e && e.preventDefault()
+              // document.getElementById("skills").scrollIntoView()
               setOpen(false)
               e.stopPropagation()
             }}
@@ -154,6 +162,8 @@ const Burger = () => {
           <SectionIndividual
             to="/#contact"
             onClick={e => {
+              // e && e.preventDefault()
+              // document.getElementById("contact").scrollIntoView()
               setOpen(false)
               e.stopPropagation()
             }}
@@ -162,8 +172,6 @@ const Burger = () => {
           </SectionIndividual>
         </li>
       </SectionList>
-
-      {/* <NavLinks open={open} setOpen={setOpen} /> */}
     </div>
   )
 }
