@@ -1,8 +1,21 @@
 import React, { useState, useEffect, useRef } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { M2, M3, M4, device } from "../constants/measurements"
+import { M2, M3, M4, M6, device } from "../constants/measurements"
 import { MEDIUM_FONT_WEIGHT, BOLD_FONT_WEIGHT } from "../constants/fonts"
+
+const Background = styled.div`
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  left: 0;
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+`
 
 const StyledBurger = styled.div`
   width: ${M4};
@@ -54,10 +67,11 @@ const SectionList = styled.ul`
     right: 0;
     width: 30vw;
     min-width: 200px;
-    padding: ${M4};
+    padding: ${M6} ${M4} ${M4};
     transition: transform 0.125s ease-in-out;
     z-index: 5;
-    border-radius: 1rem;
+    border-radius: 1rem 0 0 1rem;
+    margin: 0;
   }
 `
 
@@ -98,81 +112,84 @@ const Burger = () => {
   }, [open])
 
   return (
-    <div ref={wrapperRef}>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div />
-        <div />
-        <div />
-      </StyledBurger>
+    <>
+      {open && <Background />}
+      <div ref={wrapperRef}>
+        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+          <div />
+          <div />
+          <div />
+        </StyledBurger>
 
-      <SectionList open={open}>
-        <li>
-          <SectionIndividual
-            to="/#projects"
-            onClick={e => {
-              // e && e.preventDefault()
-              // document.getElementById("projects").scrollIntoView()
-              setOpen(false)
-              e.stopPropagation()
-            }}
-          >
-            projects
-          </SectionIndividual>
-        </li>
-        <li>
-          <SectionIndividual
-            to="/#education"
-            onClick={e => {
-              // e && e.preventDefault()
-              // document.getElementById("education").scrollIntoView()
-              setOpen(false)
-              e.stopPropagation()
-            }}
-          >
-            education
-          </SectionIndividual>
-        </li>
-        <li>
-          <SectionIndividual
-            to="/#experience"
-            onClick={e => {
-              // e && e.preventDefault()
-              // document.getElementById("experience").scrollIntoView()
-              setOpen(false)
-              e.stopPropagation()
-            }}
-          >
-            experience
-          </SectionIndividual>
-        </li>
-        <li>
-          <SectionIndividual
-            to="/#skills"
-            onClick={e => {
-              // e && e.preventDefault()
-              // document.getElementById("skills").scrollIntoView()
-              setOpen(false)
-              e.stopPropagation()
-            }}
-          >
-            skills
-          </SectionIndividual>
-        </li>
-        <li>
-          <SectionIndividual
-            to="/#contact"
-            onClick={e => {
-              // e && e.preventDefault()
-              // document.getElementById("contact").scrollIntoView()
-              setOpen(false)
-              e.stopPropagation()
-            }}
-          >
-            contact
-          </SectionIndividual>
-        </li>
-      </SectionList>
-    </div>
+        <SectionList open={open}>
+          <li>
+            <SectionIndividual
+              to="/#projects"
+              onClick={e => {
+                // e && e.preventDefault()
+                // document.getElementById("projects").scrollIntoView()
+                setOpen(false)
+                e.stopPropagation()
+              }}
+            >
+              projects
+            </SectionIndividual>
+          </li>
+          <li>
+            <SectionIndividual
+              to="/#education"
+              onClick={e => {
+                // e && e.preventDefault()
+                // document.getElementById("education").scrollIntoView()
+                setOpen(false)
+                e.stopPropagation()
+              }}
+            >
+              education
+            </SectionIndividual>
+          </li>
+          <li>
+            <SectionIndividual
+              to="/#experience"
+              onClick={e => {
+                // e && e.preventDefault()
+                // document.getElementById("experience").scrollIntoView()
+                setOpen(false)
+                e.stopPropagation()
+              }}
+            >
+              experience
+            </SectionIndividual>
+          </li>
+          <li>
+            <SectionIndividual
+              to="/#skills"
+              onClick={e => {
+                // e && e.preventDefault()
+                // document.getElementById("skills").scrollIntoView()
+                setOpen(false)
+                e.stopPropagation()
+              }}
+            >
+              skills
+            </SectionIndividual>
+          </li>
+          <li>
+            <SectionIndividual
+              to="/#contact"
+              onClick={e => {
+                // e && e.preventDefault()
+                // document.getElementById("contact").scrollIntoView()
+                setOpen(false)
+                e.stopPropagation()
+              }}
+            >
+              contact
+            </SectionIndividual>
+          </li>
+        </SectionList>
+      </div>
+    </>
   )
 }
 
