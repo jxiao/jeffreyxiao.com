@@ -5,8 +5,8 @@ import Img from "gatsby-image"
 import { device } from "../constants/measurements"
 
 const Background = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.2);
   left: 0;
   top: 0;
@@ -15,6 +15,7 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
+  margin: 0;
 `
 
 const ModalWrapper = styled.div`
@@ -166,7 +167,7 @@ const Modal = ({
   }, [keyPress])
 
   return (
-    <div>
+    <>
       {showModal ? (
         <Background onClick={closeModal} ref={modalRef}>
           <ModalWrapper showModal={showModal}>
@@ -183,26 +184,28 @@ const Modal = ({
               />
               <DescriptionContainer>{content}</DescriptionContainer>
               <TableContainer>
-                <TableRow>
-                  <TableHeader>Date Built</TableHeader>
-                  <TableInfo>{subtitle}</TableInfo>
-                </TableRow>
-                <tr>
-                  <TableHeader>Tech Stack</TableHeader>
-                  <TableInfo>{tech.join(", ")}</TableInfo>
-                </tr>
-                {collaborators && collaborators.length > 0 && (
+                <tbody>
+                  <TableRow>
+                    <TableHeader>Date Built</TableHeader>
+                    <TableInfo>{subtitle}</TableInfo>
+                  </TableRow>
                   <tr>
-                    <TableHeader>Collaborators</TableHeader>
-                    <TableInfo>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: `<div>${collaborators}</div>`,
-                        }}
-                      />
-                    </TableInfo>
+                    <TableHeader>Tech Stack</TableHeader>
+                    <TableInfo>{tech.join(", ")}</TableInfo>
                   </tr>
-                )}
+                  {collaborators && collaborators.length > 0 && (
+                    <tr>
+                      <TableHeader>Collaborators</TableHeader>
+                      <TableInfo>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `<div>${collaborators}</div>`,
+                          }}
+                        />
+                      </TableInfo>
+                    </tr>
+                  )}
+                </tbody>
               </TableContainer>
               <ButtonContainer>
                 {link && (
@@ -218,7 +221,7 @@ const Modal = ({
           </ModalWrapper>
         </Background>
       ) : null}
-    </div>
+    </>
   )
 }
 

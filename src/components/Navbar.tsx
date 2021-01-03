@@ -2,10 +2,9 @@ import React, { useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import styled, { keyframes } from "styled-components"
 
-import { M2, M3, M4, device } from "../constants/measurements"
-import { MEDIUM_FONT_WEIGHT, BOLD_FONT_WEIGHT } from "../constants/fonts"
+import { M2, M4 } from "../constants/measurements"
+import { BOLD_FONT_WEIGHT } from "../constants/fonts"
 import Burger from "./Burger"
-import NavLinks from "./NavLinks"
 
 const Header = styled.header`
   display: flex;
@@ -46,8 +45,6 @@ const Title = styled(Link)`
     animation-iteration-count: infinite;
   }
 `
-
-const MenuIcon = styled.div``
 
 const Navbar = () => {
   const data = useStaticQuery(graphql`

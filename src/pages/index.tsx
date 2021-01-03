@@ -8,7 +8,7 @@ import Home from "../components/Home"
 
 const IndexPage = () => (
   <Layout>
-    <SEO />
+    <SEO title={"Jeffrey Xiao"} />
     <Home />
   </Layout>
 )

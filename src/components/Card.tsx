@@ -97,6 +97,7 @@ const Card = ({
     if (showModal) {
       const scrollY = window.scrollY
       document.body.style.position = "fixed"
+      document.body.style.width = "100%"
       document.body.style.top = `-${scrollY}px`
     } else {
       const scrollY = document.body.style.top
@@ -140,7 +141,7 @@ const Card = ({
         <CardFooter>{footer}</CardFooter>
       </CardText>
 
-      {!left_image && (
+      {/* {!left_image && (
         <div>
           <Img
             fluid={image}
@@ -151,7 +152,7 @@ const Card = ({
             }}
           />
         </div>
-      )}
+      )} */}
     </CardContainer>
   )
 }
