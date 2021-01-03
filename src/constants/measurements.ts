@@ -17,3 +17,7 @@ export const device = {
   tablet: `(max-width: ${TABLET_WIDTH}px)`,
   phone: `(max-width: ${PHONE_WIDTH}px)`,
 }
+
+// export const
+
+export const heights = {}

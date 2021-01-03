@@ -19,7 +19,9 @@ const Background = styled.div`
 `
 
 const ModalWrapper = styled.div`
-  width: 75vw;
+  max-width: 75vw;
+  max-height: 95vh;
+  overflow-y: auto;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
@@ -178,8 +180,9 @@ const Modal = ({
                 style={{
                   minHeight: "25vh",
                   maxHeight: "50vh",
-                  width: "50vw",
+                  width: "50%",
                   height: "auto",
+                  flex: "1 0 auto",
                 }}
               />
               <DescriptionContainer>{content}</DescriptionContainer>

@@ -1,6 +1,6 @@
 ---
 start: "August 2020"
-end: "September 2020"
+end: "October 2020"
 company: "The Pingry School"
 title: "Full-Stack Web Developer"
 location: "Basking Ridge, NJ"
