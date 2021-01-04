@@ -2,7 +2,7 @@ import { FluidObject } from "gatsby-image"
 import React, { useRef, useCallback, useEffect } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { device } from "../constants/measurements"
+import { DEVICE } from "../constants/measurements"
 
 const Background = styled.div`
   width: 100vw;
@@ -57,11 +57,11 @@ const DescriptionContainer = styled.div`
   width: 75%;
   padding-top: 0.5rem;
 
-  @media ${device.tablet} {
+  @media ${DEVICE.tablet} {
     width: 90%;
   }
 
-  @media ${device.phone} {
+  @media ${DEVICE.phone} {
     width: 95%;
   }
 `
@@ -71,11 +71,11 @@ const TableContainer = styled.table`
   width: 75%;
   margin-bottom: 0;
 
-  @media ${device.tablet} {
+  @media ${DEVICE.tablet} {
     width: 90%;
   }
 
-  @media ${device.phone} {
+  @media ${DEVICE.phone} {
     width: 95%;
   }
 `

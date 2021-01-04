@@ -1,7 +1,14 @@
 import React, { useState, useEffect, useRef } from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
-import { M2, M3, M4, M6, device } from "../constants/measurements"
+import {
+  M2,
+  M3,
+  M4,
+  M6,
+  DEVICE,
+  SCROLL_DURATION,
+  SCROLL_SMOOTH_ANIMATION,
+} from "../constants/measurements"
 import { MEDIUM_FONT_WEIGHT } from "../constants/fonts"
 import { Link as ScrollLink } from "react-scroll"
 
@@ -27,7 +34,7 @@ const StyledBurger = styled.div`
   z-index: 100;
   display: none;
 
-  @media ${device.tablet} {
+  @media ${DEVICE.tablet} {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -59,7 +66,7 @@ const SectionList = styled.ul`
   list-style-type: none;
   margin: ${M2} 0;
 
-  @media ${device.tablet} {
+  @media ${DEVICE.tablet} {
     flex-flow: column nowrap;
     position: absolute;
     background-color: #fff;
@@ -84,9 +91,6 @@ const SectionTag = styled(ScrollLink)`
   margin-right: ${M2};
   color: #404040;
 `
-
-const SCROLL_DURATION = 500
-const SCROLL_SMOOTH_ANIMATION = "easeInOutQuad"
 
 const Burger = () => {
   const [open, setOpen] = useState(false)

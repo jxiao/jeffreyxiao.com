@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { BOLD_FONT_WEIGHT } from "../constants/fonts"
 import { M3 } from "../constants/measurements"
-import { device } from "../constants/measurements"
+import { DEVICE } from "../constants/measurements"
 import Modal from "./Modal"
 
 const CardContainer = styled.div`
@@ -12,7 +12,7 @@ const CardContainer = styled.div`
   flex-direction: row;
   margin-bottom: 1rem;
 
-  @media ${device.tablet} {
+  @media ${DEVICE.tablet} {
     flex-direction: column;
     align-items: center;
   }

@@ -6,7 +6,7 @@ import Education from "./Education"
 import Experience from "./Experience"
 import Skills from "./Skills"
 import Contact from "./Contact"
-import { M1, device } from "../constants/measurements"
+import { M1, DEVICE } from "../constants/measurements"
 
 const SectionWrapper = styled.section`
   display: flex;
@@ -15,12 +15,12 @@ const SectionWrapper = styled.section`
   padding: ${M1} 0;
   width: 50%;
 
-  @media ${device.tablet} {
+  @media ${DEVICE.tablet} {
     width: 80%;
     margin-left: 10%;
   }
 
-  @media ${device.phone} {
+  @media ${DEVICE.phone} {
     width: 90%;
     margin-left: 5%;
   }
@@ -51,11 +51,11 @@ const SectionSubtitle = styled.p`
 const HR = styled.hr`
   width: 50vw;
 
-  @media ${device.tablet} {
+  @media ${DEVICE.tablet} {
     width: 80vw;
   }
 
-  @media ${device.phone} {
+  @media ${DEVICE.phone} {
     width: 90vw;
   }
 `

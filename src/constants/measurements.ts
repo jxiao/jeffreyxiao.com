@@ -11,13 +11,12 @@ export const DESKTOP_WIDTH = 1024
 export const TABLET_WIDTH = 848
 export const PHONE_WIDTH = 584
 
-export const device = {
+export const DEVICE = {
   widescreen: `(max-width: ${WIDESCREEN_WIDTH}px)`,
   desktop: `(max-width: ${DESKTOP_WIDTH}px)`,
   tablet: `(max-width: ${TABLET_WIDTH}px)`,
   phone: `(max-width: ${PHONE_WIDTH}px)`,
 }
 
-// export const
-
-export const heights = {}
+export const SCROLL_DURATION = 500
+export const SCROLL_SMOOTH_ANIMATION = "easeInOutQuad"

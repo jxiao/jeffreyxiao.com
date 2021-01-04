@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled, { keyframes } from "styled-components"
-import { M2, M4 } from "../constants/measurements"
+import { M2, M4, SCROLL_DURATION } from "../constants/measurements"
 import { BOLD_FONT_WEIGHT } from "../constants/fonts"
 import Burger from "./Burger"
 import { animateScroll as scroll } from "react-scroll"
@@ -61,7 +61,7 @@ const Navbar = () => {
   `)
   return (
     <Header>
-      <Title onClick={() => scroll.scrollToTop()}>
+      <Title onClick={() => scroll.scrollToTop({ duration: SCROLL_DURATION })}>
         {data.site.siteMetadata.navTitle}
       </Title>
       <nav>

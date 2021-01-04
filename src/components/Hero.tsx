@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-import { device } from "../constants/measurements"
+import { DEVICE } from "../constants/measurements"
 
 const IMG_SIZE = "12.5rem"
 
@@ -13,7 +13,7 @@ const HeroSection = styled.div`
   text-align: center;
   margin-bottom: 1rem;
 
-  @media ${device.phone} {
+  @media ${DEVICE.phone} {
     flex-direction: column;
     align-items: center;
   }
