@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import styled, { keyframes } from "styled-components"
-
 import { M2, M4 } from "../constants/measurements"
 import { BOLD_FONT_WEIGHT } from "../constants/fonts"
 import Burger from "./Burger"
+import { animateScroll as scroll } from "react-scroll"
 
 const Header = styled.header`
   display: flex;
@@ -25,7 +25,8 @@ const Blink = keyframes`
 }
 `
 
-const Title = styled(Link)`
+const Title = styled.h1`
+  cursor: pointer;
   text-decoration: none;
   font-size: ${M4};
   font-weight: ${BOLD_FONT_WEIGHT};
@@ -60,7 +61,9 @@ const Navbar = () => {
   `)
   return (
     <Header>
-      <Title to="/">{data.site.siteMetadata.navTitle}</Title>
+      <Title onClick={() => scroll.scrollToTop()}>
+        {data.site.siteMetadata.navTitle}
+      </Title>
       <nav>
         <Burger />
       </nav>

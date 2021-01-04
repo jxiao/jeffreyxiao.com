@@ -76,15 +76,8 @@ const SectionList = styled.ul`
   }
 `
 
-const SectionIndividual = styled(Link)`
-  text-decoration: none;
-  font-size: ${M3};
-  font-weight: ${MEDIUM_FONT_WEIGHT};
-  margin-right: ${M2};
-  color: #404040;
-`
-
 const SectionTag = styled(ScrollLink)`
+  cursor: pointer;
   text-decoration: none;
   font-size: ${M3};
   font-weight: ${MEDIUM_FONT_WEIGHT};
