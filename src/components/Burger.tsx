@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { M2, M3, M4, M6, device } from "../constants/measurements"
 import { MEDIUM_FONT_WEIGHT } from "../constants/fonts"
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll"
 
 // const module =
 //   typeof window !== `undefined`
@@ -91,6 +92,16 @@ const SectionIndividual = styled(Link)`
   color: #404040;
 `
 
+const SectionTag = styled(ScrollLink)`
+  text-decoration: none;
+  font-size: ${M3};
+  font-weight: ${MEDIUM_FONT_WEIGHT};
+  margin-right: ${M2};
+  color: #404040;
+`
+
+const SCROLL_DURATION = 500
+
 const Burger = () => {
   const [open, setOpen] = useState(false)
   const wrapperRef = useRef(null)
@@ -131,69 +142,69 @@ const Burger = () => {
 
         <SectionList open={open}>
           <li>
-            <SectionIndividual
-              to="/#projects"
-              onClick={e => {
-                // e && e.preventDefault()
-                // document.getElementById("projects").scrollIntoView()
-                setOpen(false)
-                e.stopPropagation()
-              }}
+            <SectionTag
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={SCROLL_DURATION}
+              onClick={() => setOpen(false)}
             >
               projects
-            </SectionIndividual>
+            </SectionTag>
           </li>
           <li>
-            <SectionIndividual
-              to="/#education"
-              onClick={e => {
-                // e && e.preventDefault()
-                // document.getElementById("education").scrollIntoView()
-                setOpen(false)
-                e.stopPropagation()
-              }}
+            <SectionTag
+              activeClass="active"
+              to="education"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={SCROLL_DURATION}
+              onClick={() => setOpen(false)}
             >
               education
-            </SectionIndividual>
+            </SectionTag>
           </li>
           <li>
-            <SectionIndividual
-              to="/#experience"
-              onClick={e => {
-                // e && e.preventDefault()
-                // document.getElementById("experience").scrollIntoView()
-                setOpen(false)
-                e.stopPropagation()
-              }}
+            <SectionTag
+              activeClass="active"
+              to="experience"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={SCROLL_DURATION}
+              onClick={() => setOpen(false)}
             >
               experience
-            </SectionIndividual>
+            </SectionTag>
           </li>
           <li>
-            <SectionIndividual
-              to="/#skills"
-              onClick={e => {
-                // e && e.preventDefault()
-                // document.getElementById("skills").scrollIntoView()
-                setOpen(false)
-                e.stopPropagation()
-              }}
+            <SectionTag
+              activeClass="active"
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={SCROLL_DURATION}
+              onClick={() => setOpen(false)}
             >
               skills
-            </SectionIndividual>
+            </SectionTag>
           </li>
           <li>
-            <SectionIndividual
-              to="/#contact"
-              onClick={e => {
-                // e && e.preventDefault()
-                // document.getElementById("contact").scrollIntoView()
-                setOpen(false)
-                e.stopPropagation()
-              }}
+            <SectionTag
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={SCROLL_DURATION}
+              onClick={() => setOpen(false)}
             >
               contact
-            </SectionIndividual>
+            </SectionTag>
           </li>
         </SectionList>
       </div>
