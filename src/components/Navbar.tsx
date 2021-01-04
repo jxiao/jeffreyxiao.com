@@ -39,9 +39,11 @@ const Title = styled(Link)`
     vertical-align: top;
     width: 12px;
     height: ${M4};
+    margin-left: 2px;
+    border-radius: 1px;
     animation: ${Blink};
-    animation-duration: 2s;
-    animation-timing-function: step-end;
+    animation-duration: 1.75s;
+    animation-timing-function: ease;
     animation-iteration-count: infinite;
   }
 `
