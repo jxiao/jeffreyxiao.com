@@ -7,8 +7,6 @@ tech-stack: ["Swift", "Objective-C", "Google Firebase"]
 start: "May 2020"
 end: "May 2020"
 image: "../../images/credit-card-rewards.png"
-# color: "#19508e"
-# tags: ["project", "web", "penn labs", "club"]
 order: 2
 status: "Inactive"
 ---

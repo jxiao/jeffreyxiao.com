@@ -8,8 +8,6 @@ tech-stack: ["React", "Node", "Express", "MongoDB"]
 start: "August 2020"
 end: "October 2020"
 image: "../../images/pingry-covid-dash.png"
-# color: "#19508e"
-# tags: ["project", "web", "penn labs", "club"]
 collaborators:
   [
     '<a href="https://www.linkedin.com/in/drew-beckmen/" target="_BLANK">Drew Beckmen</a>',

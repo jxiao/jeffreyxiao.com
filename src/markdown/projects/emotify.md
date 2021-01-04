@@ -7,8 +7,7 @@ tech-stack: ["React", "Node", "MySQL", "Google Cloud Natural Language API"]
 start: "September 2020"
 end: "September 2020"
 image: "../../images/emotify.png"
-# color: "#19508e"
-# tags: ["project", "web", "penn labs", "club"]
+image2: "../../images/emotify-moodboost.png"
 collaborators:
   [
     '<a href="https://students.washington.edu/em66/" target="_BLANK">Manny Munoz</a>',

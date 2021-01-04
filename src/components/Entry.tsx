@@ -3,7 +3,7 @@ import { FluidObject } from "gatsby-image"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { BOLD_FONT_WEIGHT } from "../constants/fonts"
-import { M1, M2, M3, M4, M5, M6 } from "../constants/measurements"
+import { M3 } from "../constants/measurements"
 
 const EntryContainer = styled.div`
   display: flex;

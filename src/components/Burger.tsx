@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { M2, M3, M4, M6, device } from "../constants/measurements"
-import { MEDIUM_FONT_WEIGHT, BOLD_FONT_WEIGHT } from "../constants/fonts"
+import { MEDIUM_FONT_WEIGHT } from "../constants/fonts"
 
 const Background = styled.div`
   width: 100%;

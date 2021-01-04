@@ -6,7 +6,7 @@ import Education from "./Education"
 import Experience from "./Experience"
 import Skills from "./Skills"
 import Contact from "./Contact"
-import { M1, M2, M3, M4, M5, M6, device } from "../constants/measurements"
+import { M1, device } from "../constants/measurements"
 
 const SectionWrapper = styled.section`
   display: flex;
