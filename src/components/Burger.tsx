@@ -3,10 +3,14 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { M2, M3, M4, M6, device } from "../constants/measurements"
 import { MEDIUM_FONT_WEIGHT } from "../constants/fonts"
-require("smooth-scroll")('a[href*="#"]', {
-  speed: 500,
-  easing: "easeInOutQuad",
-})
+
+const module =
+  typeof window !== `undefined`
+    ? require("smooth-scroll")('a[href*="#"]', {
+        speed: 500,
+        easing: "easeInOutQuad",
+      })
+    : null
 
 const Background = styled.div`
   width: 100%;
