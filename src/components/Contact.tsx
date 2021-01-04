@@ -153,10 +153,10 @@ class Contact extends React.Component<{}, EmailState> {
   render() {
     return (
       <ContactContainer>
-        <FormContainer onSubmit={e => this.handleSubmit(e)}>
+        <FormContainer onSubmit={e => this.handleSubmit(e)} autoComplete="off">
           <EmailContainer>
             <input
-              type="text"
+              type="email"
               placeholder="Your Email (required)"
               name="email"
               value={this.state.email}

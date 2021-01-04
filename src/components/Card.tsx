@@ -136,9 +136,9 @@ const Card = ({
           repo={repo}
           collaborators={collaborators}
         />
-        <CardSubtitle>{subtitle}</CardSubtitle>
-        <CardContent>{content}</CardContent>
-        <CardFooter>{footer}</CardFooter>
+        <CardSubtitle onClick={openModal}>{subtitle}</CardSubtitle>
+        <CardContent onClick={openModal}>{content}</CardContent>
+        <CardFooter onClick={openModal}>{footer}</CardFooter>
       </CardText>
 
       {/* {!left_image && (
