@@ -3,15 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { M2, M3, M4, M6, device } from "../constants/measurements"
 import { MEDIUM_FONT_WEIGHT } from "../constants/fonts"
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll"
-
-// const module =
-//   typeof window !== `undefined`
-//     ? require("smooth-scroll")('a[href*="#"]', {
-//         speed: 500,
-//         easing: "easeInOutQuad",
-//       })
-//     : null
+import { Link as ScrollLink } from "react-scroll"
 
 const Background = styled.div`
   width: 100%;
@@ -101,6 +93,7 @@ const SectionTag = styled(ScrollLink)`
 `
 
 const SCROLL_DURATION = 500
+const SCROLL_SMOOTH_ANIMATION = "easeInOutQuad"
 
 const Burger = () => {
   const [open, setOpen] = useState(false)
@@ -146,7 +139,7 @@ const Burger = () => {
               activeClass="active"
               to="projects"
               spy={true}
-              smooth={true}
+              smooth={SCROLL_SMOOTH_ANIMATION}
               offset={0}
               duration={SCROLL_DURATION}
               onClick={() => setOpen(false)}
@@ -159,7 +152,7 @@ const Burger = () => {
               activeClass="active"
               to="education"
               spy={true}
-              smooth={true}
+              smooth={SCROLL_SMOOTH_ANIMATION}
               offset={0}
               duration={SCROLL_DURATION}
               onClick={() => setOpen(false)}
@@ -172,7 +165,7 @@ const Burger = () => {
               activeClass="active"
               to="experience"
               spy={true}
-              smooth={true}
+              smooth={SCROLL_SMOOTH_ANIMATION}
               offset={0}
               duration={SCROLL_DURATION}
               onClick={() => setOpen(false)}
@@ -185,7 +178,7 @@ const Burger = () => {
               activeClass="active"
               to="skills"
               spy={true}
-              smooth={true}
+              smooth={SCROLL_SMOOTH_ANIMATION}
               offset={0}
               duration={SCROLL_DURATION}
               onClick={() => setOpen(false)}
@@ -198,7 +191,7 @@ const Burger = () => {
               activeClass="active"
               to="contact"
               spy={true}
-              smooth={true}
+              smooth={SCROLL_SMOOTH_ANIMATION}
               offset={0}
               duration={SCROLL_DURATION}
               onClick={() => setOpen(false)}
