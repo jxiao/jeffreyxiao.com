@@ -28,7 +28,6 @@ const H4 = styled.h4`
   font-size: 1.15rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
 `
 

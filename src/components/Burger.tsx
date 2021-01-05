@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef, useCallback } from "react"
 import styled from "styled-components"
 import {
   M2,
@@ -10,7 +10,7 @@ import {
   SCROLL_SMOOTH_ANIMATION,
 } from "../constants/measurements"
 import { MEDIUM_FONT_WEIGHT } from "../constants/fonts"
-import { Link as ScrollLink } from "react-scroll"
+import { Link } from "react-scroll"
 
 const Background = styled.div`
   width: 100%;
@@ -83,7 +83,7 @@ const SectionList = styled.ul`
   }
 `
 
-const SectionTag = styled(ScrollLink)`
+const SectionTag = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   font-size: ${M3};
@@ -119,6 +119,20 @@ const Burger = () => {
       window.scrollTo(0, parseInt(scrollY || "0", 10) * -1)
     }
   }, [open])
+
+  const keyPress = useCallback(
+    e => {
+      if (e.key === "Escape" && open) {
+        setOpen(false)
+      }
+    },
+    [setOpen, open]
+  )
+
+  useEffect(() => {
+    document.addEventListener("keydown", keyPress)
+    return () => document.removeEventListener("keydown", keyPress)
+  }, [keyPress])
 
   return (
     <>

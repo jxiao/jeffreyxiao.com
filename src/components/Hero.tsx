@@ -2,7 +2,6 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-import { DEVICE } from "../constants/measurements"
 
 const IMG_SIZE = "12.5rem"
 
@@ -13,7 +12,7 @@ const HeroSection = styled.div`
   text-align: center;
   margin-bottom: 1rem;
 
-  @media ${DEVICE.phone} {
+  @media (max-width: 690px) {
     flex-direction: column;
     align-items: center;
   }
@@ -24,6 +23,10 @@ const HeadshotWrapper = styled.div<{}>`
   height: ${IMG_SIZE};
   width: ${IMG_SIZE};
   overflow: hidden;
+
+  @media (max-width: 690px) {
+    margin-bottom: 0.5rem;
+  }
 `
 
 const Biography = styled.div`
@@ -53,9 +56,12 @@ const Hero = () => {
     <>
       <HeroSection>
         <HeadshotWrapper>
-          <Img fluid={fluid} style={{ width: IMG_SIZE, height: IMG_SIZE }} />
+          <Img
+            fluid={fluid}
+            style={{ width: IMG_SIZE, height: IMG_SIZE }}
+            draggable={false}
+          />
         </HeadshotWrapper>
-        {/* <img src="../images/jeffreyxiao.jpg" alt="jeffrey-xiao-headshot" /> */}
         <Biography>
           <h1>Hi, I'm Jeffrey Xiao!</h1>
           <h3>CS @ UPenn</h3>

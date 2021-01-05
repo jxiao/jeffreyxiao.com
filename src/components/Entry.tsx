@@ -48,7 +48,11 @@ const Entry = ({ title, image, subtitle, content }: EntryProps) => {
   return (
     <EntryContainer>
       <div>
-        <Img fluid={image} style={{ width: IMG_SIZE, height: "auto" }} />
+        <Img
+          fluid={image}
+          style={{ width: IMG_SIZE, height: "auto" }}
+          draggable={false}
+        />
       </div>
       <EntryText>
         <EntryTitle>{title}</EntryTitle>

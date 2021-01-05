@@ -184,12 +184,13 @@ const Modal = ({
                   height: "auto",
                   flex: "1 0 auto",
                 }}
+                draggable={false}
               />
               <DescriptionContainer>{content}</DescriptionContainer>
               <TableContainer>
                 <tbody>
                   <TableRow>
-                    <TableHeader>Date Built</TableHeader>
+                    <TableHeader>Time Frame</TableHeader>
                     <TableInfo>{subtitle}</TableInfo>
                   </TableRow>
                   <tr>

@@ -15,6 +15,11 @@ const SectionWrapper = styled.section`
   padding: ${M1} 0;
   width: 50%;
 
+  @media ${DEVICE.desktop} {
+    width: 70%;
+    margin-left: 15%;
+  }
+
   @media ${DEVICE.tablet} {
     width: 80%;
     margin-left: 10%;
@@ -50,6 +55,10 @@ const SectionSubtitle = styled.p`
 
 const HR = styled.hr`
   width: 50vw;
+
+  @media ${DEVICE.desktop} {
+    width: 70vw;
+  }
 
   @media ${DEVICE.tablet} {
     width: 80vw;

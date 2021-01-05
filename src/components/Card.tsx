@@ -118,6 +118,7 @@ const Card = ({
               height: height,
               marginRight: "1rem",
             }}
+            draggable={false}
           />
         </div>
       )}
