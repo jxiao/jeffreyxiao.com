@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { ReactNode, useState, useEffect } from "react"
+import React, { ReactNode } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
