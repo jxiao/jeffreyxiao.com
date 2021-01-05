@@ -3,6 +3,8 @@ import React, { useRef, useCallback, useEffect } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { DEVICE } from "../constants/measurements"
+import { WHITE, BLACK, COLORS } from "../constants/colors"
+import ThemeContext from "../context/ThemeContext"
 
 const Background = styled.div`
   width: 100vw;
@@ -14,7 +16,7 @@ const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 20;
   margin: 0;
 `
 
@@ -23,8 +25,9 @@ const ModalWrapper = styled.div`
   max-height: 95vh;
   overflow-y: auto;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  color: #000;
+  background: ${({ dark }: any) =>
+    dark ? COLORS.background.dark : COLORS.background.light};
+  color: ${({ dark }: any) => (dark ? COLORS.text.dark : COLORS.text.light)};
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
@@ -37,7 +40,6 @@ const ModalContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #202020;
 `
 
 const ButtonContainer = styled.div`
@@ -50,6 +52,7 @@ const ButtonContainer = styled.div`
 
 const TitleContainer = styled.h1`
   text-align: center;
+  color: ${({ dark }: any) => (dark ? COLORS.text.dark : BLACK)};
 `
 
 const DescriptionContainer = styled.div`
@@ -108,15 +111,14 @@ const StyledButton = styled.button`
   justify-content: center;
   white-space: nowrap;
   height: 36px;
+  border-width: 2px;
   border-radius: 3px;
-  color: #222;
+  color: ${BLACK};
   line-height: 1;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
   background: none 0 0 repeat scroll rgb(242, 248, 255);
   font-weight: 500;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px,
-    rgb(180, 231, 248) 0px 0px 0px 1px inset;
 `
 
 interface ModalProps {
@@ -169,63 +171,65 @@ const Modal = ({
   }, [keyPress])
 
   return (
-    <>
-      {showModal ? (
-        <Background onClick={closeModal} ref={modalRef}>
-          <ModalWrapper showModal={showModal}>
-            <ModalContent>
-              <TitleContainer>{title}</TitleContainer>
-              <Img
-                fluid={image}
-                style={{
-                  minHeight: "25vh",
-                  maxHeight: "50vh",
-                  width: "50%",
-                  height: "auto",
-                  flex: "1 0 auto",
-                }}
-                draggable={false}
-              />
-              <DescriptionContainer>{content}</DescriptionContainer>
-              <TableContainer>
-                <tbody>
-                  <TableRow>
-                    <TableHeader>Time Frame</TableHeader>
-                    <TableInfo>{subtitle}</TableInfo>
-                  </TableRow>
-                  <tr>
-                    <TableHeader>Tech Stack</TableHeader>
-                    <TableInfo>{tech.join(", ")}</TableInfo>
-                  </tr>
-                  {collaborators && collaborators.length > 0 && (
+    <ThemeContext.Consumer>
+      {theme =>
+        showModal ? (
+          <Background onClick={closeModal} ref={modalRef}>
+            <ModalWrapper showModal={showModal} dark={theme.dark}>
+              <ModalContent>
+                <TitleContainer dark={theme.dark}>{title}</TitleContainer>
+                <Img
+                  fluid={image}
+                  style={{
+                    minHeight: "25vh",
+                    maxHeight: "50vh",
+                    width: "50%",
+                    height: "auto",
+                    flex: "1 0 auto",
+                  }}
+                  draggable={false}
+                />
+                <DescriptionContainer>{content}</DescriptionContainer>
+                <TableContainer>
+                  <tbody>
+                    <TableRow>
+                      <TableHeader>Time Frame</TableHeader>
+                      <TableInfo>{subtitle}</TableInfo>
+                    </TableRow>
                     <tr>
-                      <TableHeader>Collaborators</TableHeader>
-                      <TableInfo>
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: `<div>${collaborators}</div>`,
-                          }}
-                        />
-                      </TableInfo>
+                      <TableHeader>Tech Stack</TableHeader>
+                      <TableInfo>{tech.join(", ")}</TableInfo>
                     </tr>
+                    {collaborators && collaborators.length > 0 && (
+                      <tr>
+                        <TableHeader>Collaborators</TableHeader>
+                        <TableInfo>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: `<div>${collaborators}</div>`,
+                            }}
+                          />
+                        </TableInfo>
+                      </tr>
+                    )}
+                  </tbody>
+                </TableContainer>
+                <ButtonContainer>
+                  {link && (
+                    <A href={link} target="_BLANK" rel="noopener noreferrer">
+                      <StyledButton>Live Project</StyledButton>
+                    </A>
                   )}
-                </tbody>
-              </TableContainer>
-              <ButtonContainer>
-                {link && (
-                  <A href={link} target="_BLANK" rel="noopener noreferrer">
-                    <StyledButton>Live Project</StyledButton>
+                  <A href={repo} target="_BLANK" rel="noopener noreferrer">
+                    <StyledButton>Repository</StyledButton>
                   </A>
-                )}
-                <A href={repo} target="_BLANK" rel="noopener noreferrer">
-                  <StyledButton>Repository</StyledButton>
-                </A>
-              </ButtonContainer>
-            </ModalContent>
-          </ModalWrapper>
-        </Background>
-      ) : null}
-    </>
+                </ButtonContainer>
+              </ModalContent>
+            </ModalWrapper>
+          </Background>
+        ) : null
+      }
+    </ThemeContext.Consumer>
   )
 }
 

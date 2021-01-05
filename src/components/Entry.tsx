@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { BOLD_FONT_WEIGHT } from "../constants/fonts"
 import { M3 } from "../constants/measurements"
+import { MEDIUM_GREY } from "../constants/colors"
 
 const EntryContainer = styled.div`
   display: flex;
@@ -24,7 +25,7 @@ const EntryTitle = styled.p`
 `
 
 const EntrySubtitle = styled.p`
-  color: #807878;
+  color: ${MEDIUM_GREY};
   font-size: 1rem;
   margin: 0;
 `

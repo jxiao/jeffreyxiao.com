@@ -38,7 +38,7 @@ const Experience = () => {
               location
               image {
                 childImageSharp {
-                  fluid(maxWidth: 96) {
+                  fluid {
                     ...GatsbyImageSharpFluid_noBase64
                   }
                 }

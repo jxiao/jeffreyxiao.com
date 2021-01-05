@@ -6,6 +6,7 @@ import { BOLD_FONT_WEIGHT } from "../constants/fonts"
 import { M3 } from "../constants/measurements"
 import { DEVICE } from "../constants/measurements"
 import Modal from "./Modal"
+import { MEDIUM_GREY } from "../constants/colors"
 
 const CardContainer = styled.div`
   display: flex;
@@ -32,7 +33,7 @@ const CardTitle = styled.p`
 `
 
 const CardSubtitle = styled.p`
-  color: #807878;
+  color: ${MEDIUM_GREY};
   font-size: 1rem;
   margin: 0;
   flex-grow: 1;
@@ -45,7 +46,7 @@ const CardContent = styled.p`
 `
 
 const CardFooter = styled.p`
-  color: #807878;
+  color: ${MEDIUM_GREY};
   font-size: 0.9rem;
   font-style: italic;
   margin: 0;
@@ -141,19 +142,6 @@ const Card = ({
         <CardContent onClick={openModal}>{content}</CardContent>
         <CardFooter onClick={openModal}>{footer}</CardFooter>
       </CardText>
-
-      {/* {!left_image && (
-        <div>
-          <Img
-            fluid={image}
-            style={{
-              width: width,
-              height: height,
-              marginLeft: "1rem",
-            }}
-          />
-        </div>
-      )} */}
     </CardContainer>
   )
 }

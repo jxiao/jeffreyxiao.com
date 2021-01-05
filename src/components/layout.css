@@ -595,3 +595,20 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+/* Dark mode styles */
+.dark {
+  background-color: #2a2b2d;
+  color: #c5c5c9;
+  transition: all 0.6s ease;
+}
+
+.light {
+  transition: all 0.6s ease;
+  background-color: #fefefe;
+}
+
+.dark a,
+.dark a:visited {
+  color: #c5c5c9;
+}

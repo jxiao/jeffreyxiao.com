@@ -36,7 +36,7 @@ const Education = () => {
               end
               image {
                 childImageSharp {
-                  fluid(maxWidth: 200) {
+                  fluid {
                     ...GatsbyImageSharpFluid_noBase64
                   }
                 }

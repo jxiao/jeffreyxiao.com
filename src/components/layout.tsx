@@ -5,15 +5,15 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, { ReactNode, useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import "./layout.css"
 import { FONT } from "../constants/fonts"
+import ThemeContext from "../context/ThemeContext"
 
 const LayoutContainer = styled.div`
   display: flex;
@@ -26,25 +26,25 @@ const ContentContainer = styled.div`
   flex-grow: 1;
 `
 
-const Layout = ({ children }: any) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
+interface LayoutProps {
+  children: ReactNode
+}
 
+const Layout = ({ children }: LayoutProps) => {
   return (
-    <LayoutContainer>
-      <ContentContainer>
-        <Navbar />
-        {children}
-      </ContentContainer>
-      <Footer />
-    </LayoutContainer>
+    <ThemeContext.Consumer>
+      {theme => (
+        <div className={theme.dark ? "dark" : "light"}>
+          <LayoutContainer>
+            <ContentContainer>
+              <Navbar />
+              {children}
+            </ContentContainer>
+            <Footer />
+          </LayoutContainer>
+        </div>
+      )}
+    </ThemeContext.Consumer>
   )
 }
 

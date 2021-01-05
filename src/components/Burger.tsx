@@ -11,6 +11,9 @@ import {
 } from "../constants/measurements"
 import { MEDIUM_FONT_WEIGHT } from "../constants/fonts"
 import { Link } from "react-scroll"
+import { BLACK, WHITE, LIGHT_GREY, DARK_GREY } from "../constants/colors"
+
+import ThemeContext from "../context/ThemeContext"
 
 const Background = styled.div`
   width: 100%;
@@ -31,7 +34,7 @@ const StyledBurger = styled.div`
   position: absolute;
   top: ${M2};
   right: ${M2};
-  z-index: 100;
+  z-index: 11;
   display: none;
 
   @media ${DEVICE.tablet} {
@@ -43,7 +46,8 @@ const StyledBurger = styled.div`
   div {
     width: ${M4};
     height: 0.25rem;
-    background-color: ${({ open }: any) => (open ? "#ccc" : "#000")};
+    background-color: ${({ dark, open }: any) =>
+      dark ? (open ? LIGHT_GREY : "#c5c5c9") : open ? LIGHT_GREY : BLACK};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.125s linear;
@@ -69,7 +73,7 @@ const SectionList = styled.ul`
   @media ${DEVICE.tablet} {
     flex-flow: column nowrap;
     position: absolute;
-    background-color: #fff;
+    background-color: ${({ dark }: any) => (dark ? "#2a2b2d" : "#fff")};
     display: ${({ open }: any) => (open ? "flex" : "none")};
     top: 0;
     right: 0;
@@ -89,7 +93,14 @@ const SectionTag = styled(Link)`
   font-size: ${M3};
   font-weight: ${MEDIUM_FONT_WEIGHT};
   margin-right: ${M2};
-  color: #404040;
+  color: ${({ dark }: any) => (dark ? "#dfdfdf" : DARK_GREY)};
+`
+
+const LightDarkButton = styled.button`
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  margin-right: ${M2};
 `
 
 const Burger = () => {
@@ -135,84 +146,101 @@ const Burger = () => {
   }, [keyPress])
 
   return (
-    <>
-      {open && <Background />}
-      <div ref={wrapperRef}>
-        <StyledBurger open={open} onClick={() => setOpen(!open)}>
-          <div />
-          <div />
-          <div />
-        </StyledBurger>
-
-        <SectionList open={open}>
-          <li>
-            <SectionTag
-              activeClass="active"
-              to="projects"
-              spy={true}
-              smooth={SCROLL_SMOOTH_ANIMATION}
-              offset={0}
-              duration={SCROLL_DURATION}
-              onClick={() => setOpen(false)}
+    <ThemeContext.Consumer>
+      {theme => (
+        <>
+          <>{open && <Background />}</>
+          <div ref={wrapperRef}>
+            <StyledBurger
+              open={open}
+              onClick={() => setOpen(!open)}
+              dark={theme.dark}
             >
-              projects
-            </SectionTag>
-          </li>
-          <li>
-            <SectionTag
-              activeClass="active"
-              to="education"
-              spy={true}
-              smooth={SCROLL_SMOOTH_ANIMATION}
-              offset={0}
-              duration={SCROLL_DURATION}
-              onClick={() => setOpen(false)}
-            >
-              education
-            </SectionTag>
-          </li>
-          <li>
-            <SectionTag
-              activeClass="active"
-              to="experience"
-              spy={true}
-              smooth={SCROLL_SMOOTH_ANIMATION}
-              offset={0}
-              duration={SCROLL_DURATION}
-              onClick={() => setOpen(false)}
-            >
-              experience
-            </SectionTag>
-          </li>
-          <li>
-            <SectionTag
-              activeClass="active"
-              to="skills"
-              spy={true}
-              smooth={SCROLL_SMOOTH_ANIMATION}
-              offset={0}
-              duration={SCROLL_DURATION}
-              onClick={() => setOpen(false)}
-            >
-              skills
-            </SectionTag>
-          </li>
-          <li>
-            <SectionTag
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={SCROLL_SMOOTH_ANIMATION}
-              offset={0}
-              duration={SCROLL_DURATION}
-              onClick={() => setOpen(false)}
-            >
-              contact
-            </SectionTag>
-          </li>
-        </SectionList>
-      </div>
-    </>
+              <div />
+              <div />
+              <div />
+            </StyledBurger>
+            <SectionList open={open} dark={theme.dark}>
+              <li>
+                <SectionTag
+                  activeClass="active"
+                  to="projects"
+                  spy={true}
+                  smooth={SCROLL_SMOOTH_ANIMATION}
+                  offset={0}
+                  duration={SCROLL_DURATION}
+                  onClick={() => setOpen(false)}
+                  dark={theme.dark ? 1 : 0}
+                >
+                  projects
+                </SectionTag>
+              </li>
+              <li>
+                <SectionTag
+                  activeClass="active"
+                  to="education"
+                  spy={true}
+                  smooth={SCROLL_SMOOTH_ANIMATION}
+                  offset={0}
+                  duration={SCROLL_DURATION}
+                  onClick={() => setOpen(false)}
+                  dark={theme.dark ? 1 : 0}
+                >
+                  education
+                </SectionTag>
+              </li>
+              <li>
+                <SectionTag
+                  activeClass="active"
+                  to="experience"
+                  spy={true}
+                  smooth={SCROLL_SMOOTH_ANIMATION}
+                  offset={0}
+                  duration={SCROLL_DURATION}
+                  onClick={() => setOpen(false)}
+                  dark={theme.dark ? 1 : 0}
+                >
+                  experience
+                </SectionTag>
+              </li>
+              <li>
+                <SectionTag
+                  activeClass="active"
+                  to="skills"
+                  spy={true}
+                  smooth={SCROLL_SMOOTH_ANIMATION}
+                  offset={0}
+                  duration={SCROLL_DURATION}
+                  onClick={() => setOpen(false)}
+                  dark={theme.dark ? 1 : 0}
+                >
+                  skills
+                </SectionTag>
+              </li>
+              <li>
+                <SectionTag
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={SCROLL_SMOOTH_ANIMATION}
+                  offset={0}
+                  duration={SCROLL_DURATION}
+                  onClick={() => setOpen(false)}
+                  dark={theme.dark ? 1 : 0}
+                >
+                  contact
+                </SectionTag>
+              </li>
+              <li>
+                <LightDarkButton onClick={theme.toggleDark}>
+                  {theme.dark ? <span>☀</span> : <span>🌑</span>}
+                </LightDarkButton>
+              </li>
+            </SectionList>
+          </div>
+        </>
+      )}
+    </ThemeContext.Consumer>
   )
 }
 

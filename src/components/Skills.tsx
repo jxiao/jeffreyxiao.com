@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { M5 } from "../constants/measurements"
+import { LIGHT_GREY } from "../constants/colors"
+import ThemeContext from "../context/ThemeContext"
 
 // Icons
 import TypeScriptIcon from "./icons/TypeScript"
@@ -29,6 +31,7 @@ const H4 = styled.h4`
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+  border-color: ${({ dark }: any) => (dark ? "#dfdfdf" : LIGHT_GREY)};
 `
 
 const P = styled.p`
@@ -55,69 +58,73 @@ const Skill = styled.div`
 
 const Skills = () => {
   return (
-    <Combined>
-      <Group>
-        <H4>General</H4>
-        <Skill>
-          <JavaIcon height={M5} />
-          <P>Java</P>
-        </Skill>
-        <Skill>
-          <TypeScriptIcon height={M5} />
-          <P>TypeScript</P>
-        </Skill>
-        <Skill>
-          <PythonIcon height={M5} />
-          <P>Python</P>
-        </Skill>
-        <Skill>
-          <CIcon height={M5} />
-          <P>C</P>
-        </Skill>
-        <Skill>
-          <OCamlIcon height={M5} />
-          <P>OCaml</P>
-        </Skill>
-      </Group>
-      <Group>
-        <H4>Web</H4>
-        <Skill>
-          <NodeIcon height={M5} />
-          <P>Node</P>
-        </Skill>
-        <Skill>
-          <ReactIcon height={M5} />
-          <P>React</P>
-        </Skill>
-        <Skill>
-          <GatsbyIcon height={M5} />
-          <P>Gatsby</P>
-        </Skill>
-        <Skill>
-          <HTMLIcon height={M5} />
-          <P>HTML</P>
-        </Skill>
-        <Skill>
-          <CSSIcon height={M5} />
-          <P>CSS</P>
-        </Skill>
-      </Group>
-      <Group>
-        <H4>Data(bases)</H4>
-        <Skill>
-          <SQLIcon height={M5} />
-          <P>SQL</P>
-        </Skill>
-        <Skill>
-          <MongoDBIcon height={M5} />
-          <P>MongoDB</P>
-        </Skill>
-        <Skill>
-          <FirebaseIcon height={M5} />
-          <P>Firebase</P>
-        </Skill>
-      </Group>
-    </Combined>
+    <ThemeContext.Consumer>
+      {theme => (
+        <Combined>
+          <Group>
+            <H4 dark={theme.dark}>General</H4>
+            <Skill>
+              <JavaIcon height={M5} />
+              <P>Java</P>
+            </Skill>
+            <Skill>
+              <TypeScriptIcon height={M5} />
+              <P>TypeScript</P>
+            </Skill>
+            <Skill>
+              <PythonIcon height={M5} />
+              <P>Python</P>
+            </Skill>
+            <Skill>
+              <CIcon height={M5} />
+              <P>C</P>
+            </Skill>
+            <Skill>
+              <OCamlIcon height={M5} />
+              <P>OCaml</P>
+            </Skill>
+          </Group>
+          <Group dark={theme.dark}>
+            <H4>Web</H4>
+            <Skill>
+              <NodeIcon height={M5} />
+              <P>Node</P>
+            </Skill>
+            <Skill>
+              <ReactIcon height={M5} />
+              <P>React</P>
+            </Skill>
+            <Skill>
+              <GatsbyIcon height={M5} />
+              <P>Gatsby</P>
+            </Skill>
+            <Skill>
+              <HTMLIcon height={M5} />
+              <P>HTML</P>
+            </Skill>
+            <Skill>
+              <CSSIcon height={M5} />
+              <P>CSS</P>
+            </Skill>
+          </Group>
+          <Group dark={theme.dark}>
+            <H4>Data(bases)</H4>
+            <Skill>
+              <SQLIcon height={M5} />
+              <P>SQL</P>
+            </Skill>
+            <Skill>
+              <MongoDBIcon height={M5} />
+              <P>MongoDB</P>
+            </Skill>
+            <Skill>
+              <FirebaseIcon height={M5} />
+              <P>Firebase</P>
+            </Skill>
+          </Group>
+        </Combined>
+      )}
+    </ThemeContext.Consumer>
   )
 }
 

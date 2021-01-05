@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import Hero from "./Hero"
 import Projects from "./Projects"
@@ -7,6 +7,8 @@ import Experience from "./Experience"
 import Skills from "./Skills"
 import Contact from "./Contact"
 import { M1, DEVICE } from "../constants/measurements"
+import { LIGHT_GREY, MEDIUM_GREY } from "../constants/colors"
+import ThemeContext from "../context/ThemeContext"
 
 const SectionWrapper = styled.section`
   display: flex;
@@ -44,7 +46,7 @@ const SectionTitle = styled.h3`
 
 const SectionSubtitle = styled.p`
   font-size: 12px;
-  color: #807878;
+  color: ${MEDIUM_GREY};
   margin-bottom: 0;
   display: flex;
   flex-grow: 1;
@@ -55,6 +57,7 @@ const SectionSubtitle = styled.p`
 
 const HR = styled.hr`
   width: 50vw;
+  background-color: ${({ dark }: any) => (dark ? "#dfdfdf" : LIGHT_GREY)};
 
   @media ${DEVICE.desktop} {
     width: 70vw;
@@ -74,46 +77,53 @@ const Section = ({
   children,
   id,
   subtitle,
+  dark,
 }: {
   title: string
   children: React.ReactNode | React.ReactNodeArray
   id: string
   subtitle?: string
+  dark: boolean
 }): React.ReactElement => (
   <SectionWrapper id={id}>
     <SectionHeader>
       <SectionTitle>{title}</SectionTitle>
       <SectionSubtitle>{subtitle}</SectionSubtitle>
     </SectionHeader>
-    <HR />
+    <HR dark={dark} />
     {children}
   </SectionWrapper>
 )
 
 const Home = () => {
   return (
-    <>
-      <Hero />
-      <Section
-        title={"Projects"}
-        id={"projects"}
-        subtitle={"(click for additional info)"}
-      >
-        <Projects />
-      </Section>
-      <Section title={"Education"} id={"education"}>
-        <Education />
-      </Section>
-      <Section title={"Experience"} id={"experience"}>
-        <Experience />
-      </Section>
-      <Section title={"Skills"} id={"skills"}>
-        <Skills />
-      </Section>
-      <Section title={"Contact"} id={"contact"}>
-        <Contact />
-      </Section>
-    </>
+    <ThemeContext.Consumer>
+      {theme => (
+        <>
+          <Hero />
+          <Section
+            title={"Projects"}
+            id={"projects"}
+            subtitle={"(click for additional info)"}
+            dark={theme.dark}
+          >
+            <Projects />
+          </Section>
+          <Section title={"Education"} id={"education"} dark={theme.dark}>
+            <Education />
+          </Section>
+          <Section title={"Experience"} id={"experience"} dark={theme.dark}>
+            <Experience />
+          </Section>
+          <Section title={"Skills"} id={"skills"} dark={theme.dark}>
+            <Skills />
+          </Section>
+          <Section title={"Contact"} id={"contact"} dark={theme.dark}>
+            <Contact />
+          </Section>
+        </>
+      )}
+    </ThemeContext.Consumer>
   )
 }
 
