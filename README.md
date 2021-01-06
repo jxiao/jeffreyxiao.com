@@ -7,3 +7,5 @@
 - React
 - JavaScript
 - TypeScript
+
+Transition to Gatsby inspired by [www.cameroncabo.com](https://www.cameroncabo.com/)!
