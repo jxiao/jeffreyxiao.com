@@ -6,12 +6,15 @@ import { BOLD_FONT_WEIGHT } from "../constants/fonts"
 import { M3 } from "../constants/measurements"
 import { DEVICE } from "../constants/measurements"
 import Modal from "./Modal"
-import { MEDIUM_GREY } from "../constants/colors"
+import { COLORS, DARK_GREY, MEDIUM_GREY } from "../constants/colors"
 
 const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 1rem;
+  background-color: ${({ color }: { color: string }) => color};
+  border-radius: 20px;
+  padding: 1rem;
 
   @media ${DEVICE.tablet} {
     flex-direction: column;
@@ -30,6 +33,7 @@ const CardTitle = styled.p`
   margin: 0;
   flex-direction: row;
   flex-grow: 0;
+  color: ${DARK_GREY};
 `
 
 const CardSubtitle = styled.p`
@@ -43,6 +47,7 @@ const CardContent = styled.p`
   margin-bottom: 0rem;
   overflow-wrap: normal;
   flex-grow: 1;
+  color: ${COLORS.text.light};
 `
 
 const CardFooter = styled.p`
@@ -65,6 +70,7 @@ interface CardProps {
   link: string
   repo: string
   tech: string[]
+  color: string
   collaborators: string[]
 }
 
@@ -80,6 +86,7 @@ const Card = ({
   link,
   repo,
   tech,
+  color,
   collaborators,
 }: CardProps) => {
   const IMG_SIZE = "15rem"
@@ -109,7 +116,7 @@ const Card = ({
   }, [showModal])
 
   return (
-    <CardContainer>
+    <CardContainer color={color}>
       {left_image && (
         <div onClick={openModal}>
           <Img
@@ -136,6 +143,7 @@ const Card = ({
           html={html}
           link={link}
           repo={repo}
+          color={color}
           collaborators={collaborators}
         />
         <CardSubtitle onClick={openModal}>{subtitle}</CardSubtitle>

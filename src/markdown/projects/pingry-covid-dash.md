@@ -12,6 +12,7 @@ collaborators:
   [
     '<a href="https://www.linkedin.com/in/drew-beckmen/" target="_BLANK">Drew Beckmen</a>',
   ]
+color: "rgb(240, 248, 255)"
 order: 0
 status: "Active"
 ---

@@ -14,6 +14,7 @@ collaborators:
     ' <a href="https://www.linkedin.com/in/albert-zhong/" target="_BLANK">Albert Zhong</a>',
     ' <a href="https://www.linkedin.com/in/luis-sangueado/" target="_BLANK">Luis Sangueado</a>',
   ]
+color: "rgb(253,248,227)"
 order: 1
 status: "Inactive"
 ---

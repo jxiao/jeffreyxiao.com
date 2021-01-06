@@ -3,7 +3,7 @@ import React, { useRef, useCallback, useEffect } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { DEVICE } from "../constants/measurements"
-import { WHITE, BLACK, COLORS } from "../constants/colors"
+import { WHITE, BLACK, COLORS, DARK_GREY } from "../constants/colors"
 import ThemeContext from "../context/ThemeContext"
 
 const Background = styled.div`
@@ -25,8 +25,8 @@ const ModalWrapper = styled.div`
   max-height: 95vh;
   overflow-y: auto;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: ${({ dark }: any) =>
-    dark ? COLORS.background.dark : COLORS.background.light};
+  background: ${({ color }: any) => color};
+
   color: ${({ dark }: any) => (dark ? COLORS.text.dark : COLORS.text.light)};
   display: flex;
   flex-direction: column;
@@ -40,6 +40,7 @@ const ModalContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: ${COLORS.text.light};
 `
 
 const ButtonContainer = styled.div`
@@ -52,7 +53,8 @@ const ButtonContainer = styled.div`
 
 const TitleContainer = styled.h1`
   text-align: center;
-  color: ${({ dark }: any) => (dark ? COLORS.text.dark : BLACK)};
+  color: ${DARK_GREY};
+  // color: ${({ dark }: any) => (dark ? COLORS.text.dark : BLACK)};
 `
 
 const DescriptionContainer = styled.div`
@@ -99,6 +101,7 @@ const TableInfo = styled.th`
 `
 
 const A = styled.a`
+  color: ${COLORS.text.dark};
   text-decoration: none;
 `
 
@@ -133,6 +136,7 @@ interface ModalProps {
   link?: string
   repo: string
   collaborators?: string[]
+  color: string
 }
 
 const Modal = ({
@@ -146,6 +150,7 @@ const Modal = ({
   html,
   link,
   repo,
+  color,
   collaborators,
 }: ModalProps) => {
   const modalRef = useRef()
@@ -175,7 +180,7 @@ const Modal = ({
       {theme =>
         showModal ? (
           <Background onClick={closeModal} ref={modalRef}>
-            <ModalWrapper showModal={showModal} dark={theme.dark}>
+            <ModalWrapper showModal={showModal} dark={theme.dark} color={color}>
               <ModalContent>
                 <TitleContainer dark={theme.dark}>{title}</TitleContainer>
                 <Img

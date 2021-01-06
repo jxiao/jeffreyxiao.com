@@ -7,6 +7,7 @@ tech-stack: ["Swift", "Objective-C", "Google Firebase"]
 start: "May 2020"
 end: "May 2020"
 image: "../../images/credit-card-rewards.png"
+color: "rgb(242,226,229)"
 order: 2
 status: "Inactive"
 ---

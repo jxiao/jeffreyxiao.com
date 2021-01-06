@@ -14,6 +14,7 @@ interface ProjectsNode {
       tech_stack: string[]
       start: string
       end: string
+      color: string
       image: {
         childImageSharp: {
           fluid: FluidObject
@@ -41,6 +42,7 @@ const Projects = () => {
               tech_stack
               start
               end
+              color
               image {
                 childImageSharp {
                   fluid(quality: 100) {
@@ -73,6 +75,7 @@ const Projects = () => {
                 start,
                 end,
                 image,
+                color,
                 collaborators,
               },
             },
@@ -104,6 +107,7 @@ const Projects = () => {
               html={html}
               link={link}
               repo={repo}
+              color={color}
               collaborators={collaborators}
             />
           )
