@@ -4,6 +4,7 @@ import styled from "styled-components"
 const FooterTag = styled.footer`
   width: 100%;
   text-align: center;
+  margin: 1rem auto 1rem;
 `
 
 const Footer = () => {

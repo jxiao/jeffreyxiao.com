@@ -22,6 +22,9 @@ interface ProjectsNode {
       }
       collaborators: string[]
     }
+    fields: {
+      slug: string
+    }
   }
 }
 
@@ -53,6 +56,9 @@ const Projects = () => {
               collaborators
             }
             html
+            fields {
+              slug
+            }
           }
         }
       }
@@ -78,6 +84,7 @@ const Projects = () => {
                 color,
                 collaborators,
               },
+              fields: { slug },
             },
           },
           index
@@ -108,6 +115,7 @@ const Projects = () => {
               link={link}
               repo={repo}
               color={color}
+              page={`/projects/${slug}`}
               collaborators={collaborators}
             />
           )

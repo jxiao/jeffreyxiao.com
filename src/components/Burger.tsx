@@ -10,7 +10,7 @@ import {
   SCROLL_SMOOTH_ANIMATION,
 } from "../constants/measurements"
 import { MEDIUM_FONT_WEIGHT } from "../constants/fonts"
-import { Link } from "react-scroll"
+import { Link } from "gatsby"
 import { BLACK, WHITE, LIGHT_GREY, DARK_GREY } from "../constants/colors"
 
 import ThemeContext from "../context/ThemeContext"
@@ -36,56 +36,55 @@ const StyledBurger = styled.div`
   right: ${M2};
   z-index: 11;
   display: none;
-
-  @media ${DEVICE.tablet} {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-  }
-
-  div {
-    width: ${M4};
-    height: 0.25rem;
-    background-color: ${({ dark, open }: any) =>
-      dark ? (open ? LIGHT_GREY : "#c5c5c9") : open ? LIGHT_GREY : BLACK};
-    border-radius: 10px;
-    transform-origin: 1px;
-    transition: all 0.125s linear;
-
-    &:nth-child(1) {
-      transform: ${({ open }: any) => (open ? "rotate(45deg)" : "rotate(0)")};
-    }
-    &:nth-child(2) {
-      diplay: ${({ open }: any) => (open ? "none" : "initial")};
-      opacity: ${({ open }: any) => (open ? "0" : "1")};
-    }
-    &:nth-child(3) {
-      transform: ${({ open }: any) => (open ? "rotate(-45deg)" : "rotate(0)")};
-    }
-  }
 `
+
+// @media ${DEVICE.tablet} {
+//   display: flex;
+//   justify-content: space-around;
+//   flex-direction: column;
+// }
+
+// div {
+//   width: ${M4};
+//   height: 0.25rem;
+//   background-color: ${({ dark, open }: any) => dark ? (open ? LIGHT_GREY : "#c5c5c9") : open ? LIGHT_GREY : BLACK};
+//   border-radius: 10px;
+//   transform-origin: 1px;
+//   transition: all 0.125s linear;
+
+//   &:nth-child(1) {
+//     transform: ${({ open }: any) => (open ? "rotate(45deg)" : "rotate(0)")};
+//   }
+//   &:nth-child(2) {
+//     diplay: ${({ open }: any) => (open ? "none" : "initial")};
+//     opacity: ${({ open }: any) => (open ? "0" : "1")};
+//   }
+//   &:nth-child(3) {
+//     transform: ${({ open }: any) => (open ? "rotate(-45deg)" : "rotate(0)")};
+//   }
+// }
 
 const SectionList = styled.ul`
   display: flex;
   list-style-type: none;
   margin: ${M2} 0;
-
-  @media ${DEVICE.tablet} {
-    flex-flow: column nowrap;
-    position: absolute;
-    background-color: ${({ dark }: any) => (dark ? "#2a2b2d" : "#fff")};
-    display: ${({ open }: any) => (open ? "flex" : "none")};
-    top: 0;
-    right: 0;
-    width: 30vw;
-    min-width: 200px;
-    padding: ${M6} ${M4} ${M4};
-    transition: transform 0.125s ease-in-out;
-    z-index: 5;
-    border-radius: 1rem 0 0 1rem;
-    margin: 0;
-  }
 `
+
+// @media ${DEVICE.tablet} {
+//   flex-flow: column nowrap;
+//   position: absolute;
+//   background-color: ${({ dark }: any) => (dark ? "#2a2b2d" : "#fff")};
+//   display: ${({ open }: any) => (open ? "flex" : "none")};
+//   top: 0;
+//   right: 0;
+//   width: 30vw;
+//   min-width: 200px;
+//   padding: ${M6} ${M4} ${M4};
+//   transition: transform 0.125s ease-in-out;
+//   z-index: 5;
+//   border-radius: 1rem 0 0 1rem;
+//   margin: 0;
+// }
 
 const SectionTag = styled(Link)`
   cursor: pointer;
@@ -163,72 +162,20 @@ const Burger = () => {
             <SectionList open={open} dark={theme.dark}>
               <li>
                 <SectionTag
-                  activeClass="active"
-                  to="projects"
-                  spy={true}
-                  smooth={SCROLL_SMOOTH_ANIMATION}
-                  offset={0}
-                  duration={SCROLL_DURATION}
+                  to="/"
+                  onClick={() => setOpen(false)}
+                  dark={theme.dark ? 1 : 0}
+                >
+                  home
+                </SectionTag>
+              </li>
+              <li>
+                <SectionTag
+                  to="/projects"
                   onClick={() => setOpen(false)}
                   dark={theme.dark ? 1 : 0}
                 >
                   projects
-                </SectionTag>
-              </li>
-              <li>
-                <SectionTag
-                  activeClass="active"
-                  to="education"
-                  spy={true}
-                  smooth={SCROLL_SMOOTH_ANIMATION}
-                  offset={0}
-                  duration={SCROLL_DURATION}
-                  onClick={() => setOpen(false)}
-                  dark={theme.dark ? 1 : 0}
-                >
-                  education
-                </SectionTag>
-              </li>
-              <li>
-                <SectionTag
-                  activeClass="active"
-                  to="experience"
-                  spy={true}
-                  smooth={SCROLL_SMOOTH_ANIMATION}
-                  offset={0}
-                  duration={SCROLL_DURATION}
-                  onClick={() => setOpen(false)}
-                  dark={theme.dark ? 1 : 0}
-                >
-                  experience
-                </SectionTag>
-              </li>
-              <li>
-                <SectionTag
-                  activeClass="active"
-                  to="skills"
-                  spy={true}
-                  smooth={SCROLL_SMOOTH_ANIMATION}
-                  offset={0}
-                  duration={SCROLL_DURATION}
-                  onClick={() => setOpen(false)}
-                  dark={theme.dark ? 1 : 0}
-                >
-                  skills
-                </SectionTag>
-              </li>
-              <li>
-                <SectionTag
-                  activeClass="active"
-                  to="contact"
-                  spy={true}
-                  smooth={SCROLL_SMOOTH_ANIMATION}
-                  offset={0}
-                  duration={SCROLL_DURATION}
-                  onClick={() => setOpen(false)}
-                  dark={theme.dark ? 1 : 0}
-                >
-                  contact
                 </SectionTag>
               </li>
               <li>
