@@ -10,7 +10,7 @@ import {
   SCROLL_SMOOTH_ANIMATION,
 } from "../constants/measurements"
 import { MEDIUM_FONT_WEIGHT } from "../constants/fonts"
-import { Link } from "react-scroll"
+import { Link } from "gatsby"
 import { BLACK, WHITE, LIGHT_GREY, DARK_GREY } from "../constants/colors"
 
 import ThemeContext from "../context/ThemeContext"
@@ -163,12 +163,7 @@ const Burger = () => {
             <SectionList open={open} dark={theme.dark}>
               <li>
                 <SectionTag
-                  activeClass="active"
-                  to="projects"
-                  spy={true}
-                  smooth={SCROLL_SMOOTH_ANIMATION}
-                  offset={0}
-                  duration={SCROLL_DURATION}
+                  to="/projects"
                   onClick={() => setOpen(false)}
                   dark={theme.dark ? 1 : 0}
                 >
@@ -177,54 +172,7 @@ const Burger = () => {
               </li>
               <li>
                 <SectionTag
-                  activeClass="active"
-                  to="education"
-                  spy={true}
-                  smooth={SCROLL_SMOOTH_ANIMATION}
-                  offset={0}
-                  duration={SCROLL_DURATION}
-                  onClick={() => setOpen(false)}
-                  dark={theme.dark ? 1 : 0}
-                >
-                  education
-                </SectionTag>
-              </li>
-              <li>
-                <SectionTag
-                  activeClass="active"
-                  to="experience"
-                  spy={true}
-                  smooth={SCROLL_SMOOTH_ANIMATION}
-                  offset={0}
-                  duration={SCROLL_DURATION}
-                  onClick={() => setOpen(false)}
-                  dark={theme.dark ? 1 : 0}
-                >
-                  experience
-                </SectionTag>
-              </li>
-              <li>
-                <SectionTag
-                  activeClass="active"
-                  to="skills"
-                  spy={true}
-                  smooth={SCROLL_SMOOTH_ANIMATION}
-                  offset={0}
-                  duration={SCROLL_DURATION}
-                  onClick={() => setOpen(false)}
-                  dark={theme.dark ? 1 : 0}
-                >
-                  skills
-                </SectionTag>
-              </li>
-              <li>
-                <SectionTag
-                  activeClass="active"
-                  to="contact"
-                  spy={true}
-                  smooth={SCROLL_SMOOTH_ANIMATION}
-                  offset={0}
-                  duration={SCROLL_DURATION}
+                  to="/#contact"
                   onClick={() => setOpen(false)}
                   dark={theme.dark ? 1 : 0}
                 >

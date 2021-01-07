@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { FluidObject } from "gatsby-image"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
+import Img, { FluidObject } from "gatsby-image"
 import styled from "styled-components"
 import { BOLD_FONT_WEIGHT } from "../constants/fonts"
 import { M3 } from "../constants/measurements"
@@ -15,7 +15,6 @@ const CardContainer = styled.div`
   background-color: ${({ color }: { color: string }) => color};
   border-radius: 20px;
   padding: 1rem;
-  cursor: pointer;
 
   @media ${DEVICE.tablet} {
     flex-direction: column;
@@ -26,7 +25,6 @@ const CardContainer = styled.div`
 const CardText = styled.div`
   display: flex;
   flex-direction: column;
-  cursor: pointer;
 `
 
 const CardTitle = styled.p`
@@ -74,6 +72,7 @@ interface CardProps {
   tech: string[]
   color: string
   collaborators: string[]
+  page?: string
 }
 
 const Card = ({
@@ -90,6 +89,7 @@ const Card = ({
   tech,
   color,
   collaborators,
+  page,
 }: CardProps) => {
   const IMG_SIZE = "15rem"
 
@@ -120,7 +120,7 @@ const Card = ({
   return (
     <CardContainer color={color}>
       {left_image && (
-        <div onClick={openModal}>
+        <div>
           <Img
             fluid={image}
             style={{
@@ -133,7 +133,7 @@ const Card = ({
         </div>
       )}
       <CardText>
-        <CardTitle onClick={openModal}>{title}</CardTitle>
+        <CardTitle>{title}</CardTitle>
         <Modal
           showModal={showModal}
           setShowModal={setShowModal}
@@ -148,9 +148,10 @@ const Card = ({
           color={color}
           collaborators={collaborators}
         />
-        <CardSubtitle onClick={openModal}>{subtitle}</CardSubtitle>
-        <CardContent onClick={openModal}>{content}</CardContent>
-        <CardFooter onClick={openModal}>{footer}</CardFooter>
+        <CardSubtitle>{subtitle}</CardSubtitle>
+        <CardContent>{content}</CardContent>
+        <CardFooter>{footer}</CardFooter>
+        <Link to={page}>More</Link>
       </CardText>
     </CardContainer>
   )
