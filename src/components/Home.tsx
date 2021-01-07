@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import Hero from "./Hero"
 import About from "./About"
@@ -10,6 +10,8 @@ import Contact from "./Contact"
 import { M1, DEVICE } from "../constants/measurements"
 import { LIGHT_GREY, MEDIUM_GREY } from "../constants/colors"
 import ThemeContext from "../context/ThemeContext"
+import TableOfContents from "./TableOfContents"
+import { Link } from "gatsby"
 
 const SectionWrapper = styled.section`
   display: flex;
@@ -73,6 +75,24 @@ const HR = styled.hr`
   }
 `
 
+const AllProjectsLink = styled(Link)`
+  margin-left: auto;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  width: fit-content;
+  padding: 0.05rem 0.25rem;
+  border-radius: 3px;
+  background: ${({ dark }: { dark: boolean }) =>
+    dark ? "rgb(180, 231, 248)" : "rgba(4, 167, 242, 0.1)"};
+  border: 1px solid
+    ${({ dark }: { dark: boolean }) =>
+      dark ? "rgb(180, 231, 248)" : "rgb(23, 113, 143)"};
+  &:hover {
+    background: ${({ dark }: { dark: boolean }) =>
+      dark ? "rgb(200, 241, 255)" : "rgb(180, 231, 248)"};
+  }
+`
+
 const Section = ({
   title,
   children,
@@ -108,16 +128,20 @@ const Home = () => {
       {theme => (
         <>
           <Hero />
+          <TableOfContents />
           <Section id={"About"} dark={theme.dark} excludeHeader={true}>
             <About dark={theme.dark} />
           </Section>
           <Section
             title={"Projects"}
             id={"projects"}
-            subtitle={"(click for additional info)"}
+            // subtitle={"(click for additional info)"}
             dark={theme.dark}
           >
             <Projects />
+            <AllProjectsLink to={"/projects"} dark={theme.dark}>
+              See all projects
+            </AllProjectsLink>
           </Section>
           <Section title={"Education"} id={"education"} dark={theme.dark}>
             <Education />

@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import { M1, DEVICE } from "../constants/measurements"
 import { WHITE, BLACK, COLORS, DARK_GREY } from "../constants/colors"
 import ThemeContext from "../context/ThemeContext"
+import Helmet from "react-helmet"
 
 const OuterWrapper = styled.div`
   display: flex;
@@ -165,6 +166,11 @@ const ProjectTemplate = props => {
     <ThemeContext.Consumer>
       {theme => (
         <Layout>
+          <Helmet
+            bodyAttributes={{
+              class: theme.dark ? "dark" : "light",
+            }}
+          />
           <SEO title={"Projects"} />
           <OuterWrapper name={"OuterWrapper"}>
             <ModalWrapper dark={theme.dark} color={data.color}>

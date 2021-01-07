@@ -609,6 +609,14 @@ pre tt:after {
   background-color: #fefefe;
 }
 
+.active {
+  color: #00ff58;
+}
+
+.dark .active {
+  color: #b00020;
+}
+
 /* .dark a,
 .dark a:visited {
   color: #c5c5c9;

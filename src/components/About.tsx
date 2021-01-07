@@ -10,6 +10,7 @@ const AboutContainer = styled.div`
   font-size: 1.125rem;
   line-height: 1.5rem;
   text-align: center;
+  margin-bottom: 1rem;
 `
 
 const About = ({ dark }: AboutProps) => {

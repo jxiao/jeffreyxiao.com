@@ -59,8 +59,8 @@ const CardFooter = styled.p`
 
 const MoreLink = styled(Link)`
   text-decoration: none;
-  padding: 0.05rem 0.25rem;
   width: fit-content;
+  padding: 0.05rem 0.25rem;
   border-radius: 3px;
   font-size: 0.95rem;
   margin-left: auto;
