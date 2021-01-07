@@ -31,7 +31,7 @@ This is where I came in. My friend Drew Beckmen was already helping to build an 
 
 <span style="pointer-events: none;">![](../../images/pingry-covid-dashboard/covid-wireframes.png)</span>
 
-These are the three designed wireframes - the leftmost being the earliest draft and the rightmost being the latest wireframe (although the current/final version is drastically different!)
+These are the three designed wireframes (made using Adobe XD) - the leftmost being the earliest draft and the rightmost being the latest wireframe (although the current/final version is drastically different!)
 
 Implementing the front-end styling and components was not easy or simple, but was overall the most straightforward portion. Since I chose to use React, things like state management, third-party packages, and component simplicity were all there.
 
@@ -53,6 +53,8 @@ The data for this dashboard is two fold.
 
 Because daily numbers may fluctuate and therefore may not be the best sole indicator, we wanted to present historical (7-day / 14-day) averages. This meant that each day, my server-side code would have to modify the public database by pushing the newest day's numbers, popping oldest day's numbers, and then recalculate the sliding window averages.
 
+The final project is deployed using Heroku.
+
 ---
 
 ## Setbacks
@@ -69,4 +71,4 @@ I'm very proud of this project. It was my first full fledged full-stack applicat
 
 <p><p style="display: inline">I owe a lot of credit to my friend</p> <p style="display: inline"><a class="link" href="https://www.linkedin.com/in/drew-beckmen/">Drew Beckmen</a></a></p> <p style="display: inline">for introducing me to and working with me on this project as well as the entire Pingry COVID task-force. Without them, none of this would be possible, and the school may not even have a public dashboard!</p></p>
 
-<p style="font-style: italic; display: inline">Check out The Pingry School's article on both this and Drew's project <p style="font-style: italic; display: inline"><a class="link" href="https://www.pingry.org/hp/news-page/news-pop-up-page/~post/young-alumni-launch-pingrys-cutting-edge-covid-19-dashboard-20201116)">here!</a></p></p>
+<p style="font-style: italic; display: inline">Check out The Pingry School's article on both this and Drew's project <p style="font-style: italic; display: inline"><a class="link" href="https://www.pingry.org/hp/news-page/news-pop-up-page/~post/young-alumni-launch-pingrys-cutting-edge-covid-19-dashboard-20201116" target="_BLANK" rel="noopener noreferrer">here!</a></p></p>
