@@ -10,9 +10,9 @@ image: "../../images/emotify.png"
 image2: "../../images/emotify-moodboost.png"
 collaborators:
   [
-    '<a href="https://students.washington.edu/em66/" target="_BLANK">Manny Munoz</a>',
-    ' <a href="https://www.linkedin.com/in/albert-zhong/" target="_BLANK">Albert Zhong</a>',
-    ' <a href="https://www.linkedin.com/in/luis-sangueado/" target="_BLANK">Luis Sangueado</a>',
+    '<a class="link" href="https://students.washington.edu/em66/" target="_BLANK">Manny Munoz</a>',
+    ' <a class="link" href="https://www.linkedin.com/in/albert-zhong/" target="_BLANK">Albert Zhong</a>',
+    ' <a class="link" href="https://www.linkedin.com/in/luis-sangueado/" target="_BLANK">Luis Sangueado</a>',
   ]
 color: "rgb(253,248,227)"
 order: 1

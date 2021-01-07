@@ -621,3 +621,31 @@ pre tt:after {
 .dark a:visited {
   color: #c5c5c9;
 } */
+
+a:active {
+  color: initial;
+}
+
+.link {
+  background: rgba(4, 167, 242, 0.1);
+  border-bottom: 1px solid rgb(23, 113, 143);
+  text-decoration: none !important;
+  transition: background 200ms ease 0s;
+  color: inherit;
+}
+
+.link:hover {
+  background: rgb(180, 231, 248);
+}
+
+.dark .link {
+  background: rgba(23, 113, 143, 0.3);
+  border-bottom: 1px solid rgb(180, 231, 248);
+  text-decoration: none !important;
+  transition: background 200ms ease 0s;
+  color: inherit;
+}
+
+.dark .link:hover {
+  background: rgb(23, 113, 143);
+}

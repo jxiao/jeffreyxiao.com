@@ -10,7 +10,7 @@ end: "Present"
 image: "../../images/pingry-covid-dashboard/pingry-covid-dash.png"
 collaborators:
   [
-    '<a href="https://www.linkedin.com/in/drew-beckmen/" target="_BLANK">Drew Beckmen</a>',
+    '<a class="link" href="https://www.linkedin.com/in/drew-beckmen/" target="_BLANK">Drew Beckmen</a>',
   ]
 color: "rgb(240, 248, 255)"
 order: 0
@@ -25,9 +25,11 @@ As the 2020-2021 academic year approached, Pingry (my high school) was brainstor
 
 This is where I came in. My friend Drew Beckmen was already helping to build an internal, back-end portal to compile and tab incoming data (i.e. new cases and contact tracing). As such, I helped to develop the front-end portion of this task - the product visible to the entire community.
 
+---
+
 ## Development Process
 
-![](../../images/pingry-covid-dashboard/covid-wireframes.png)
+<span style="pointer-events: none;">![](../../images/pingry-covid-dashboard/covid-wireframes.png)</span>
 
 These are the three designed wireframes - the leftmost being the earliest draft and the rightmost being the latest wireframe (although the current/final version is drastically different!)
 
@@ -38,18 +40,20 @@ The data for this dashboard is two fold.
 1. External data
 
    - This includes data regarding cases and infection rates at the state and county levels.
-   - This was relatively simple to fetch. A simple axios command calling [CovidActNow.org](https://www.covidactnow.org/?s=1490446)'s API got the job done.
+   - <p style="display: inline">This was relatively simple to fetch. A simple axios command calling</p> <p style="display: inline"><a class="link" href="https://www.covidactnow.org/?s=1490446">CovidActNow.org</a></p><p style="display: inline">'s API got the job done.</p>
 
-![](../../images/pingry-covid-dashboard/covid-external.png)
+<span style="pointer-events: none;">![](../../images/pingry-covid-dashboard/covid-external.png)</span>
 
 2. Internal data
 
    - This includes data regarding cases within the Pingry School community
    - There are two public endpoints from the back-end database, so these were called to refresh and update the data every morning.
 
-![](../../images/pingry-covid-dashboard/covid-internal.png)
+<span style="pointer-events: none;">![](../../images/pingry-covid-dashboard/covid-internal.png)</span>
 
 Because daily numbers may fluctuate and therefore may not be the best sole indicator, we wanted to present historical (7-day / 14-day) averages. This meant that each day, my server-side code would have to modify the public database by pushing the newest day's numbers, popping oldest day's numbers, and then recalculate the sliding window averages.
+
+---
 
 ## Setbacks
 
@@ -57,10 +61,12 @@ Perhaps the biggest setback was the reliability and communication. Because famil
 
 Shortly after the dashboard was made public, we found a logical flaw in the way we presented the historical graphs. Because test results aren't immediate, any positive test result would be entered a day or two after the date of test administration. As a result, there becomes an inconsistency in the historical data (at the time, we were manually tracking these and found impossible numbers to satisfy the dashboard). Thankfully, this bug was found relatively early on and (more importantly) was fixed immediately. Still, finding this bug shortly after the dashboard had been released was nerve-wracking, to say the least.
 
+---
+
 ## Takeaways
 
 I'm very proud of this project. It was my first full fledged full-stack application, and I spent a lot of time planning, developing, and maintaining it. It certainly taught me a lot about the development/production process, especially on how to bounce back from and respond to changes.
 
-I owe a lot of credit to my friend [Drew Beckmen](https://www.linkedin.com/in/drew-beckmen/) for introducing me to and working with me on this project as well as the entire Pingry COVID task-force. Without them, none of this would be possible, and the school may not even have a public dashboard!
+<p><p style="display: inline">I owe a lot of credit to my friend</p> <p style="display: inline"><a class="link" href="https://www.linkedin.com/in/drew-beckmen/">Drew Beckmen</a></a></p> <p style="display: inline">for introducing me to and working with me on this project as well as the entire Pingry COVID task-force. Without them, none of this would be possible, and the school may not even have a public dashboard!</p></p>
 
-_Check out The Pingry School's article on both this and Drew's project [here](https://www.pingry.org/hp/news-page/news-pop-up-page/~post/young-alumni-launch-pingrys-cutting-edge-covid-19-dashboard-20201116)!_
+<p style="font-style: italic; display: inline">Check out The Pingry School's article on both this and Drew's project <p style="font-style: italic; display: inline"><a class="link" href="https://www.pingry.org/hp/news-page/news-pop-up-page/~post/young-alumni-launch-pingrys-cutting-edge-covid-19-dashboard-20201116)">here!</a></p></p>

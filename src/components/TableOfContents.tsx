@@ -12,11 +12,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
+  top: 50%;
   width: fit-content;
   padding: 0 0.95rem;
   line-height: 2rem;
 
-  @media ${DEVICE.tablet} {
+  @media ${DEVICE.tablet}, (max-height: 480px) {
     display: none;
   }
 `
