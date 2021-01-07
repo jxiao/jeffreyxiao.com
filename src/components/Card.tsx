@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
 import Img, { FluidObject } from "gatsby-image"
 import styled from "styled-components"
-import { BOLD_FONT_WEIGHT } from "../constants/fonts"
+import { BOLD_FONT_WEIGHT, HighlightedButton } from "../constants/fonts"
 import { M3 } from "../constants/measurements"
 import { DEVICE } from "../constants/measurements"
 import Modal from "./Modal"
@@ -55,25 +54,6 @@ const CardFooter = styled.p`
   font-size: 0.9rem;
   font-style: italic;
   margin: 0;
-`
-
-const MoreLink = styled(Link)`
-  text-decoration: none;
-  width: fit-content;
-  padding: 0.05rem 0.25rem;
-  border-radius: 3px;
-  font-size: 0.95rem;
-  margin-left: auto;
-
-  background: ${({ dark }: { dark: boolean }) =>
-    dark ? "rgba(23, 113, 143, 0.3)" : "rgba(4, 167, 242, 0.1)"};
-  border: 1px solid
-    ${({ dark }: { dark: boolean }) =>
-      dark ? "rgb(180, 231, 248)" : "rgb(23, 113, 143)"};
-  &:hover {
-    background: ${({ dark }: { dark: boolean }) =>
-      dark ? "rgb(23, 113, 143)" : "rgb(180, 231, 248)"};
-  }
 `
 
 interface CardProps {
@@ -170,7 +150,9 @@ const Card = ({
         <CardSubtitle>{subtitle}</CardSubtitle>
         <CardContent>{content}</CardContent>
         <CardFooter>{footer}</CardFooter>
-        <MoreLink to={page}>More</MoreLink>
+        <HighlightedButton to={page} dark={false}>
+          More
+        </HighlightedButton>
       </CardText>
     </CardContainer>
   )

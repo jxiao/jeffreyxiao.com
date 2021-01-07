@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { M1, DEVICE } from "../constants/measurements"
+import { HighlightedButton } from "../constants/fonts"
 import { WHITE, BLACK, COLORS, DARK_GREY } from "../constants/colors"
 import ThemeContext from "../context/ThemeContext"
 import Helmet from "react-helmet"
@@ -43,6 +44,7 @@ const ModalWrapper = styled.div`
   padding-top: 1rem;
   z-index: 10;
   border-radius: 10px;
+  margin-bottom: 1rem;
 `
 
 const ModalContent = styled.div`
@@ -160,6 +162,23 @@ export const query = graphql`
   }
 `
 
+const AllProjectsLink = styled(Link)`
+  margin-bottom: 1rem;
+  text-decoration: none;
+  width: fit-content;
+  padding: 0.05rem 0.25rem;
+  border-radius: 3px;
+  background: ${({ dark }: { dark: boolean }) =>
+    dark ? "rgb(180, 231, 248)" : "rgba(4, 167, 242, 0.1)"};
+  border: 1px solid
+    ${({ dark }: { dark: boolean }) =>
+      dark ? "rgb(180, 231, 248)" : "rgb(23, 113, 143)"};
+  &:hover {
+    background: ${({ dark }: { dark: boolean }) =>
+      dark ? "rgb(200, 241, 255)" : "rgb(180, 231, 248)"};
+  }
+`
+
 const ProjectTemplate = props => {
   const data = props.data.markdownRemark.frontmatter
   return (
@@ -236,7 +255,15 @@ const ProjectTemplate = props => {
                 </ButtonContainer>
               </ModalContent>
             </ModalWrapper>
-            <Link to={"/projects"}>Back to Projects</Link>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<div>${props.data.markdownRemark.html}</div>`,
+              }}
+            />
+
+            <AllProjectsLink to={"/projects"} dark={theme.dark}>
+              Back to Projects
+            </AllProjectsLink>
           </OuterWrapper>
         </Layout>
       )}
