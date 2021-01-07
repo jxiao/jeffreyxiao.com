@@ -14,6 +14,7 @@ const OuterWrapper = styled.div`
   flex-direction: column;
   margin-left: 25%;
   padding: ${M1} 0;
+  height: 100%;
   width: 50%;
 
   @media ${DEVICE.desktop} {
@@ -33,7 +34,6 @@ const OuterWrapper = styled.div`
 `
 
 const ModalWrapper = styled.div`
-  flex-grow: 1;
   background: ${({ color }: any) => color};
 
   color: ${({ dark }: any) => (dark ? COLORS.text.dark : COLORS.text.light)};
@@ -166,7 +166,7 @@ const ProjectTemplate = props => {
       {theme => (
         <Layout>
           <SEO title={"Projects"} />
-          <OuterWrapper>
+          <OuterWrapper name={"OuterWrapper"}>
             <ModalWrapper dark={theme.dark} color={data.color}>
               <ModalContent>
                 <TitleContainer dark={theme.dark}>{data.title}</TitleContainer>
@@ -230,8 +230,7 @@ const ProjectTemplate = props => {
                 </ButtonContainer>
               </ModalContent>
             </ModalWrapper>
-
-            <Link to={"/"}>Back to Home</Link>
+            <Link to={"/projects"}>Back to Projects</Link>
           </OuterWrapper>
         </Layout>
       )}

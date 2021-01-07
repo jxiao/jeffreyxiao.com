@@ -57,6 +57,25 @@ const CardFooter = styled.p`
   margin: 0;
 `
 
+const MoreLink = styled(Link)`
+  text-decoration: none;
+  padding: 0.05rem 0.25rem;
+  width: fit-content;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  margin-left: auto;
+
+  background: ${({ dark }: { dark: boolean }) =>
+    dark ? "rgba(23, 113, 143, 0.3)" : "rgba(4, 167, 242, 0.1)"};
+  border: 1px solid
+    ${({ dark }: { dark: boolean }) =>
+      dark ? "rgb(180, 231, 248)" : "rgb(23, 113, 143)"};
+  &:hover {
+    background: ${({ dark }: { dark: boolean }) =>
+      dark ? "rgb(23, 113, 143)" : "rgb(180, 231, 248)"};
+  }
+`
+
 interface CardProps {
   title: string
   image: FluidObject
@@ -151,7 +170,7 @@ const Card = ({
         <CardSubtitle>{subtitle}</CardSubtitle>
         <CardContent>{content}</CardContent>
         <CardFooter>{footer}</CardFooter>
-        <Link to={page}>More</Link>
+        <MoreLink to={page}>More</MoreLink>
       </CardText>
     </CardContainer>
   )

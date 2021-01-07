@@ -34,6 +34,12 @@ const Biography = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-left: 1rem;
+
+  @media (max-width: 690px) {
+    h3 {
+      margin-bottom: 0rem;
+    }
+  }
 `
 
 const useMouse = () => {
