@@ -15,6 +15,7 @@ const CardContainer = styled.div`
   background-color: ${({ color }: { color: string }) => color};
   border-radius: 20px;
   padding: 1rem;
+  cursor: pointer;
 
   @media ${DEVICE.tablet} {
     flex-direction: column;
@@ -25,6 +26,7 @@ const CardContainer = styled.div`
 const CardText = styled.div`
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 `
 
 const CardTitle = styled.p`

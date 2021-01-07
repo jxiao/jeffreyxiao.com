@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import Hero from "./Hero"
+import About from "./About"
 import Projects from "./Projects"
 import Education from "./Education"
 import Experience from "./Experience"
@@ -78,19 +79,25 @@ const Section = ({
   id,
   subtitle,
   dark,
+  excludeHeader,
 }: {
-  title: string
+  title?: string
   children: React.ReactNode | React.ReactNodeArray
   id: string
   subtitle?: string
   dark: boolean
+  excludeHeader?: boolean
 }): React.ReactElement => (
   <SectionWrapper id={id}>
-    <SectionHeader>
-      <SectionTitle>{title}</SectionTitle>
-      <SectionSubtitle>{subtitle}</SectionSubtitle>
-    </SectionHeader>
-    <HR dark={dark} />
+    {!excludeHeader && (
+      <>
+        <SectionHeader>
+          <SectionTitle>{title}</SectionTitle>
+          <SectionSubtitle>{subtitle}</SectionSubtitle>
+        </SectionHeader>
+        <HR dark={dark} />
+      </>
+    )}
     {children}
   </SectionWrapper>
 )
@@ -101,6 +108,9 @@ const Home = () => {
       {theme => (
         <>
           <Hero />
+          <Section id={"About"} dark={theme.dark} excludeHeader={true}>
+            <About dark={theme.dark} />
+          </Section>
           <Section
             title={"Projects"}
             id={"projects"}

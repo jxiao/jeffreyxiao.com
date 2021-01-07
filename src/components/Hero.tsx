@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
@@ -36,6 +36,19 @@ const Biography = styled.div`
   margin-left: 1rem;
 `
 
+const useMouse = () => {
+  const [position, setPosition] = useState({ x: null, y: null })
+  useEffect(() => {
+    function handle(e: MouseEvent) {
+      setPosition({ x: e.pageX, y: e.pageY })
+    }
+    document.addEventListener("mousemove", handle)
+    return () => document.removeEventListener("mousemove", handle)
+  })
+
+  return position
+}
+
 const Hero = () => {
   const data = useStaticQuery(
     graphql`
@@ -51,7 +64,7 @@ const Hero = () => {
     `
   )
   const { fluid } = data.file.childImageSharp
-
+  const { x, y } = useMouse()
   return (
     <>
       <HeroSection>
@@ -65,6 +78,9 @@ const Hero = () => {
         <Biography>
           <h1>Hi, I'm Jeffrey Xiao!</h1>
           <h3>CS @ UPenn</h3>
+          {/* <h4>
+            {x}, {y}
+          </h4> */}
         </Biography>
       </HeroSection>
     </>
