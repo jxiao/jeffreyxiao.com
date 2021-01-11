@@ -150,7 +150,7 @@ const Card = ({
         <CardSubtitle>{subtitle}</CardSubtitle>
         <CardContent>{content}</CardContent>
         <CardFooter>{footer}</CardFooter>
-        <HighlightedButton to={page} dark={false}>
+        <HighlightedButton to={page} dark={0}>
           More
         </HighlightedButton>
       </CardText>

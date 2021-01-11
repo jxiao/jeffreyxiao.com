@@ -2,7 +2,7 @@
 title: "Emotify"
 description: "Built during PennApps XXI: Web app to help kids with Autism detect & practice sentiment and emotions during conversations."
 path: "/projects/emotify"
-repo: "https://github.com/jeffrey-xiao-17/Emotify"
+repo: "https://github.com/jxiao/Emotify"
 tech-stack: ["React", "Node", "MySQL", "Google Cloud Natural Language API"]
 start: "September 2020"
 end: "September 2020"
@@ -29,15 +29,21 @@ Emotify is an all-in-one resource for people with trouble recognizing and interp
 
 Additionally, we built results and history pages to allow users the chance to see their progress over time. We think it's especially motivating to see your own growth - and it's our hope that the users will too.
 
+---
+
 ## Development Process
 
 We set up a React front-end, splitting the different features of our web app into tabs for easy navigation. On the back-end, we ran our app on Google cloud and used their SQL database service as well as running a natural language processing API offered by Google Cloud Platform.
 
 <span style="pointer-events: none;">![](../../images/emotify/emotify-moodboost.png)</span>
 
+---
+
 ## Setbacks
 
 We had envisioned a very different app on Friday, one build out of Unity where users could interact with a Sim like world. This way, users will have a more realistic, 3d feel for how to interact with others in a variety of situations. However, none of us were particularly familiar with Unity, so picking that up from scratch was difficult. In the end, we pivoted over to a web app, where we found much more success.
+
+---
 
 ## Takeaways
 

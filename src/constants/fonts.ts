@@ -32,13 +32,13 @@ export const HighlightedButton = styled(Link)`
   font-size: 0.95rem;
   margin-left: auto;
 
-  background: ${({ dark }: { dark: boolean }) =>
+  background: ${({ dark }: { dark: number }) =>
     dark ? "rgba(23, 113, 143, 0.3)" : "rgba(4, 167, 242, 0.1)"};
   border: 1px solid
-    ${({ dark }: { dark: boolean }) =>
+    ${({ dark }: { dark: number }) =>
       dark ? "rgb(180, 231, 248)" : "rgb(23, 113, 143)"};
   &:hover {
-    background: ${({ dark }: { dark: boolean }) =>
+    background: ${({ dark }: { dark: number }) =>
       dark ? "rgb(23, 113, 143)" : "rgb(180, 231, 248)"};
   }
 `
