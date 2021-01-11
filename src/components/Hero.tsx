@@ -53,31 +53,14 @@ const useMouse = ({ data }) => {
       }
       setPosition({ x: e.pageX - coords.x, y: e.pageY - coords.y })
 
-      const sub = document.getElementById("sub")
-      const image = document.getElementsByClassName("profile")[0]
-      if (position.x <= 0) {
-        sub.innerHTML = "LEFT"
-        // image.style.display = "none"
-      } else {
-        sub.innerHTML = "RIGHT"
-        // image.style.display = "block"
-      }
-      // )
-      // if (position.x <= 0 && position.y <= 0) {
-      //   sub.innerHTML = "TOP LEFT (blue)"
-      //   ;(image).fluid =
-      //     "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/1024px-Solid_blue.svg.png"
-      // } else if (position.x <= 0 && position.y >= 0) {
-      //   sub.innerHTML = "BOTTOM LEFT (red)"
-      //   ;(image as HTMLImageElement).src =
-      //     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX/AAAZ4gk3AAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"
-      // } else if (position.x >= 0 && position.y >= 0) {
-      //   sub.innerHTML = "BOTTOM RIGHT (green)"
-      //   ;(image as HTMLImageElement).src =
-      //     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEUAgACc+aWRAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"
+      // const sub = document.getElementById("sub")
+      // const image = document.getElementsByClassName("profile")[0]
+      // if (position.x <= 0) {
+      //   sub.innerHTML = "LEFT"
+      //   // image.style.display = "none"
       // } else {
-      //   sub.innerHTML = "TOP RIGHT (yellow)"
-      //   ;(image as HTMLImageElement).src = "../../images/prof.png"
+      //   sub.innerHTML = "RIGHT"
+      //   // image.style.display = "block"
       // }
     }
     document.addEventListener("mousemove", handle)
@@ -140,9 +123,6 @@ const Hero = () => {
             height="100px"
             style={{ margin: "auto" }}
           /> */}
-          <h4>
-            {x}, {y}
-          </h4>
         </Biography>
       </HeroSection>
     </>
