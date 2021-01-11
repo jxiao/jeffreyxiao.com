@@ -130,7 +130,7 @@ const Home = () => {
           <Hero />
           <TableOfContents />
           <Section id={"About"} dark={theme.dark} excludeHeader={true}>
-            <About dark={theme.dark} />
+            <About dark={theme.dark ? 1 : 0} />
           </Section>
           <Section
             title={"Projects"}
@@ -139,7 +139,7 @@ const Home = () => {
             dark={theme.dark}
           >
             <Projects />
-            <AllProjectsLink to={"/projects"} dark={theme.dark}>
+            <AllProjectsLink to={"/projects"} dark={theme.dark ? 1 : 0}>
               See all projects
             </AllProjectsLink>
           </Section>

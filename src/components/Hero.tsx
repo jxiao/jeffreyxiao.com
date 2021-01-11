@@ -42,11 +42,26 @@ const Biography = styled.div`
   }
 `
 
-const useMouse = () => {
+const useMouse = ({ data }) => {
   const [position, setPosition] = useState({ x: null, y: null })
   useEffect(() => {
     function handle(e: MouseEvent) {
-      setPosition({ x: e.pageX, y: e.pageY })
+      const headshot = document.getElementById("headshot")
+      const coords = {
+        x: headshot.offsetLeft + headshot.offsetWidth / 2,
+        y: headshot.offsetTop + headshot.offsetHeight / 2,
+      }
+      setPosition({ x: e.pageX - coords.x, y: e.pageY - coords.y })
+
+      // const sub = document.getElementById("sub")
+      // const image = document.getElementsByClassName("profile")[0]
+      // if (position.x <= 0) {
+      //   sub.innerHTML = "LEFT"
+      //   // image.style.display = "none"
+      // } else {
+      //   sub.innerHTML = "RIGHT"
+      //   // image.style.display = "block"
+      // }
     }
     document.addEventListener("mousemove", handle)
     return () => document.removeEventListener("mousemove", handle)
@@ -59,7 +74,14 @@ const Hero = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        file(relativePath: { eq: "jeffreyxiao.jpg" }) {
+        hero: file(relativePath: { eq: "jeffreyxiao.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 256) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
+        prof: file(relativePath: { eq: "profs.png" }) {
           childImageSharp {
             fluid(maxWidth: 256) {
               ...GatsbyImageSharpFluid_noBase64
@@ -69,8 +91,8 @@ const Hero = () => {
       }
     `
   )
-  const { fluid } = data.file.childImageSharp
-  const { x, y } = useMouse()
+  const { fluid } = data.hero.childImageSharp
+  const { x, y } = useMouse({ data })
   return (
     <>
       <HeroSection>
@@ -82,11 +104,25 @@ const Hero = () => {
           />
         </HeadshotWrapper>
         <Biography>
-          <h1>Hi, I'm Jeffrey Xiao!</h1>
-          <h3>CS @ UPenn</h3>
-          {/* <h4>
-            {x}, {y}
-          </h4> */}
+          <h1 id={"headshot"}>Hi, I'm Jeffrey Xiao!</h1>
+          <h3 id={"sub"}>CS @ UPenn</h3>
+          {/* <div className="headshots" style={{ overflow: "hidden" }}>
+            <Img
+              fluid={data.prof.childImageSharp.fluid}
+              draggable={false}
+              className={"profile"}
+            />
+          </div> */}
+          {/* <img
+            id="image"
+            src={
+              "./Users/jeffreyxiao/Documents/GitHub/Personal-Website/src/images/prof.png"
+            }
+            alt={"image"}
+            width="100px"
+            height="100px"
+            style={{ margin: "auto" }}
+          /> */}
         </Biography>
       </HeroSection>
     </>

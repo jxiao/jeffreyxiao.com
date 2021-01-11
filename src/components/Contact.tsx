@@ -168,7 +168,7 @@ class Contact extends React.Component<{}, EmailState> {
         </FormContainer>
         <IconContainer>
           <a
-            href="https://github.com/jeffrey-xiao-17"
+            href="https://github.com/jxiao"
             target="_BLANK"
             rel="noopener noreferrer"
           >

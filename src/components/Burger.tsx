@@ -15,6 +15,8 @@ import { BLACK, WHITE, LIGHT_GREY, DARK_GREY } from "../constants/colors"
 
 import ThemeContext from "../context/ThemeContext"
 
+const RIGHT_MARGIN = "0.6rem"
+
 const Background = styled.div`
   width: 100%;
   height: 100%;
@@ -33,7 +35,7 @@ const StyledBurger = styled.div`
   height: ${M4};
   position: absolute;
   top: ${M2};
-  right: ${M2};
+  right: ${RIGHT_MARGIN};
   z-index: 11;
   display: none;
 `
@@ -91,7 +93,7 @@ const SectionTag = styled(Link)`
   text-decoration: none;
   font-size: ${M3};
   font-weight: ${MEDIUM_FONT_WEIGHT};
-  margin-right: ${M2};
+  margin-right: ${RIGHT_MARGIN};
   color: ${({ dark }: any) => (dark ? "#dfdfdf" : DARK_GREY)};
 `
 
@@ -99,7 +101,8 @@ const LightDarkButton = styled.button`
   cursor: pointer;
   background: transparent;
   border: none;
-  margin-right: ${M2};
+  padding-left: 0;
+  margin-right: ${RIGHT_MARGIN};
 `
 
 const Burger = () => {

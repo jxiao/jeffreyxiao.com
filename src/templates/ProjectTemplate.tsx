@@ -190,7 +190,7 @@ const ProjectTemplate = props => {
               class: theme.dark ? "dark" : "light",
             }}
           />
-          <SEO title={"Projects"} />
+          <SEO title={data.title} />
           <OuterWrapper name={"OuterWrapper"}>
             <ModalWrapper dark={theme.dark} color={data.color}>
               <ModalContent>
