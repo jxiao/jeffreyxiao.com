@@ -70,17 +70,14 @@ const Experience = () => {
             .filter(Boolean)
             .join(" --- ")
 
-          // NOTE: SKIP THE FIRST EXPERIENCE HERE
           return (
-            i != 0 && (
-              <Entry
-                key={mergedTitle}
-                title={mergedTitle}
-                image={fluid}
-                subtitle={subtitle}
-                content={html}
-              />
-            )
+            <Entry
+              key={mergedTitle}
+              title={mergedTitle}
+              image={fluid}
+              subtitle={subtitle}
+              content={html}
+            />
           )
         }
       )}
