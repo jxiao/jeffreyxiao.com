@@ -9,7 +9,7 @@ import TypeScriptIcon from "./icons/TypeScript"
 import JavaIcon from "./icons/Java"
 import OCamlIcon from "./icons/OCaml"
 import PythonIcon from "./icons/Python"
-import CIcon from "./icons/C"
+// import CIcon from "./icons/C"
 import NodeIcon from "./icons/Node"
 import ReactIcon from "./icons/React"
 import GatsbyIcon from "./icons/Gatsby"
@@ -18,6 +18,7 @@ import CSSIcon from "./icons/CSS"
 import SQLIcon from "./icons/SQL"
 import MongoDBIcon from "./icons/MongoDB"
 import FirebaseIcon from "./icons/Firebase"
+import CPlusPlusIcon from "./icons/CPlusPlus"
 
 const Combined = styled.div`
   display: flex;
@@ -76,8 +77,8 @@ const Skills = () => {
               <P>Python</P>
             </Skill>
             <Skill>
-              <CIcon height={M5} />
-              <P>C</P>
+              <CPlusPlusIcon height={M5} />
+              <P>C / C++</P>
             </Skill>
             <Skill>
               <OCamlIcon height={M5} />

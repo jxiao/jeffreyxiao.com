@@ -249,9 +249,15 @@ const ProjectTemplate = props => {
                       <StyledButton>Live Project</StyledButton>
                     </A>
                   )}
-                  <A href={data.repo} target="_BLANK" rel="noopener noreferrer">
-                    <StyledButton>Repository</StyledButton>
-                  </A>
+                  {data.repo && (
+                    <A
+                      href={data.repo}
+                      target="_BLANK"
+                      rel="noopener noreferrer"
+                    >
+                      <StyledButton>Repository</StyledButton>
+                    </A>
+                  )}
                 </ButtonContainer>
               </ModalContent>
             </ModalWrapper>
