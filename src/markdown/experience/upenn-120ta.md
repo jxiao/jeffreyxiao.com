@@ -8,7 +8,7 @@ image: "../../images/upenn.png"
 order: 2
 parts: 2
 titles: ["Head Teaching Assistant: CIS120", "Teaching Assistant: CIS120"]
-dates: ["May 2021 - Present", "January 2020 - May 2021"]
+dates: ["April 2021 - Present", "January 2020 - April 2021"]
 descriptions:
   [
     [
