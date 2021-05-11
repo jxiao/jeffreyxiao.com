@@ -16,6 +16,8 @@ const EntryText = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 1rem;
+  width: 100%;
+  flex-grow: 1;
 `
 
 const EntryTitle = styled.p`
@@ -42,28 +44,60 @@ interface EntryProps {
   image: FluidObject
   subtitle: string
   content: string
+  parts: number
+  company: string
 }
 
-const Entry = ({ title, image, subtitle, content }: EntryProps) => {
+const Entry = ({
+  title,
+  image,
+  subtitle,
+  content,
+  parts,
+  company,
+}: EntryProps) => {
   const IMG_SIZE = "5rem"
-  return (
-    <EntryContainer>
-      <div>
-        <Img
-          fluid={image}
-          style={{ width: IMG_SIZE, height: "auto" }}
-          draggable={false}
-        />
-      </div>
-      <EntryText>
-        <EntryTitle>{title}</EntryTitle>
-        <EntrySubtitle>{subtitle}</EntrySubtitle>
-        <EntryContent
-          dangerouslySetInnerHTML={{ __html: `<div>${content}</div>` }}
-        />
-      </EntryText>
-    </EntryContainer>
-  )
+  if (parts && parts > 1) {
+    return (
+      <EntryContainer>
+        <div>
+          <Img
+            fluid={image}
+            style={{ width: IMG_SIZE, height: "auto" }}
+            draggable={false}
+          />
+        </div>
+        <EntryText>
+          <div>
+            <EntryTitle>{company}</EntryTitle>
+            <EntrySubtitle>{subtitle}</EntrySubtitle>
+            {/* <EntryContent
+            dangerouslySetInnerHTML={{ __html: `<div>${content}</div>` }}
+          /> */}
+          </div>
+        </EntryText>
+      </EntryContainer>
+    )
+  } else {
+    return (
+      <EntryContainer>
+        <div>
+          <Img
+            fluid={image}
+            style={{ width: IMG_SIZE, height: "auto" }}
+            draggable={false}
+          />
+        </div>
+        <EntryText>
+          <EntryTitle>{title}</EntryTitle>
+          <EntrySubtitle>{subtitle}</EntrySubtitle>
+          <EntryContent
+            dangerouslySetInnerHTML={{ __html: `<div>${content}</div>` }}
+          />
+        </EntryText>
+      </EntryContainer>
+    )
+  }
 }
 
 export default Entry

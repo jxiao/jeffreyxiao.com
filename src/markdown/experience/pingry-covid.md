@@ -6,6 +6,7 @@ title: "Full-Stack Web Developer"
 location: "Basking Ridge, NJ"
 image: "../../images/pingry.png"
 order: 3
+parts: 1
 ---
 
 - Developed and maintained a public-facing COVID-19 dashboard to inform the Pingry community of the school’s reopening status and confirmed cases at the state, county and internal levels
