@@ -17,6 +17,10 @@ interface ExperienceNode {
           fluid: FluidObject
         }
       }
+      parts: number
+      titles: string[]
+      dates: string[]
+      descriptions: string[][]
     }
   }
 }
@@ -43,6 +47,10 @@ const Experience = () => {
                   }
                 }
               }
+              parts
+              titles
+              dates
+              descriptions
             }
             html
           }
@@ -58,7 +66,18 @@ const Experience = () => {
           {
             node: {
               html,
-              frontmatter: { start, end, company, title, image, location },
+              frontmatter: {
+                start,
+                end,
+                company,
+                title,
+                image,
+                location,
+                parts,
+                titles,
+                dates,
+                descriptions,
+              },
             },
           },
           i
@@ -77,6 +96,14 @@ const Experience = () => {
               image={fluid}
               subtitle={subtitle}
               content={html}
+              parts={parts}
+              start={start}
+              end={end}
+              location={location}
+              company={company}
+              titles={titles}
+              dates={dates}
+              descriptions={descriptions}
             />
           )
         }

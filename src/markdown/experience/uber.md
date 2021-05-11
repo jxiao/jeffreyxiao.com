@@ -6,6 +6,8 @@ title: "Incoming Software Engineer Intern"
 location: "San Francisco, CA"
 image: "../../images/uber.png"
 order: 0
+parts: 1
 ---
 
 - UberSTAR Intern
+- Marketplace Engineering Team

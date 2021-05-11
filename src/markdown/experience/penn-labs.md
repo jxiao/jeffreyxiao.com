@@ -6,6 +6,7 @@ title: "Frontend Engineer"
 location: "Philadelphia, PA"
 image: "../../images/penn-labs.png"
 order: 1
+parts: 1
 ---
 
 - Member of Penn Courses Team
