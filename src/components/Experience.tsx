@@ -18,6 +18,9 @@ interface ExperienceNode {
         }
       }
       parts: number
+      titles: string[]
+      dates: string[]
+      descriptions: string[][]
     }
   }
 }
@@ -45,6 +48,9 @@ const Experience = () => {
                 }
               }
               parts
+              titles
+              dates
+              descriptions
             }
             html
           }
@@ -68,6 +74,9 @@ const Experience = () => {
                 image,
                 location,
                 parts,
+                titles,
+                dates,
+                descriptions,
               },
             },
           },
@@ -88,7 +97,13 @@ const Experience = () => {
               subtitle={subtitle}
               content={html}
               parts={parts}
+              start={start}
+              end={end}
+              location={location}
               company={company}
+              titles={titles}
+              dates={dates}
+              descriptions={descriptions}
             />
           )
         }

@@ -39,6 +39,35 @@ const EntryContent = styled.div<{}>`
   }
 `
 
+const NodeSpan = styled.span`
+  display: block;
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  background-color: #b2b2b2;
+  position: relative;
+  left: -3.75rem;
+  top: 1.1rem;
+`
+
+const EntryGroup = styled.li<{ isLast: any }>`
+  list-style-type: none;
+  position: relative;
+
+  ${({ isLast }: any) =>
+    !isLast &&
+    `&:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 1.5rem;
+    left: -3.54rem;
+    width: 2px;
+    background-color: #b2b2b2;
+    border-radius: 1rem
+  }`}
+`
+
 interface EntryProps {
   title: string
   image: FluidObject
@@ -46,6 +75,12 @@ interface EntryProps {
   content: string
   parts: number
   company: string
+  titles: string[]
+  dates: string[]
+  start: string
+  end: string
+  location: string
+  descriptions: string[][]
 }
 
 const Entry = ({
@@ -55,28 +90,64 @@ const Entry = ({
   content,
   parts,
   company,
+  titles,
+  dates,
+  start,
+  end,
+  location,
+  descriptions,
 }: EntryProps) => {
   const IMG_SIZE = "5rem"
   if (parts && parts > 1) {
-    return (
-      <EntryContainer>
+    const text = []
+    for (var i = 0; i < parts; i++) {
+      const description = descriptions[i]
+      const tags = []
+      description.forEach(tag =>
+        tags.push(
+          <li key={tag} style={{ listStyleType: "disc" }}>
+            {tag}
+          </li>
+        )
+      )
+      text.push(
         <div>
-          <Img
-            fluid={image}
-            style={{ width: IMG_SIZE, height: "auto" }}
-            draggable={false}
-          />
+          <NodeSpan></NodeSpan>
+          <EntryGroup isLast={i == parts - 1}>
+            <EntryTitle>{titles[i]}</EntryTitle>
+            <EntrySubtitle>{dates[i]}</EntrySubtitle>
+            <EntryContent>
+              <ul>{tags}</ul>
+            </EntryContent>
+          </EntryGroup>
         </div>
-        <EntryText>
+      )
+    }
+    return (
+      <>
+        <EntryContainer style={{ marginBottom: 0 }}>
           <div>
-            <EntryTitle>{company}</EntryTitle>
-            <EntrySubtitle>{subtitle}</EntrySubtitle>
-            {/* <EntryContent
-            dangerouslySetInnerHTML={{ __html: `<div>${content}</div>` }}
-          /> */}
+            <Img
+              fluid={image}
+              style={{ width: IMG_SIZE, height: "auto" }}
+              draggable={false}
+            />
           </div>
-        </EntryText>
-      </EntryContainer>
+          <EntryText>
+            <div>
+              <EntryTitle>{company}</EntryTitle>
+              <EntrySubtitle>{subtitle}</EntrySubtitle>
+            </div>
+          </EntryText>
+        </EntryContainer>
+        <EntryContainer>
+          <EntryText style={{ marginLeft: "4.5rem" }}>
+            <ul>
+              <div style={{ position: "relative" }}>{text}</div>
+            </ul>
+          </EntryText>
+        </EntryContainer>
+      </>
     )
   } else {
     return (
