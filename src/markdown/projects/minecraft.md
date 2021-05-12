@@ -60,7 +60,7 @@ As the final project for CIS 460 (Interactive Computer Graphics), my team and I 
 ### Milestone 2
 
 <a href="https://youtu.be/FdqOyrEHh2A" title="Milestone 2"><img src="../../images/minecraft/milestone-2.png" alt="Milestone 2" /></a>
-<a href="https://youtu.be/FdqOyrEHh2A" title="Milestone 2">Link to Milestone 2 Video Here</a>
+<a class="link" href="https://youtu.be/FdqOyrEHh2A" title="Milestone 2">Link to Milestone 2 Video Here</a>
 
 - **L-System Rivers**
   - Implemented by _Stephen Lee_
@@ -94,7 +94,7 @@ As the final project for CIS 460 (Interactive Computer Graphics), my team and I 
 ### Milestone 3
 
 <a href="https://www.youtube.com/watch?v=GF05g4LuAxE" title="Milestone 3"><img src="../../images/minecraft/milestone-3.png" alt="Milestone 3" /></a>
-<a href="https://www.youtube.com/watch?v=GF05g4LuAxE" title="Milestone 3">Link to Milestone 3 Video Here</a>
+<a class="link" href="https://www.youtube.com/watch?v=GF05g4LuAxE" title="Milestone 3">Link to Milestone 3 Video Here</a>
 
 - **Caves**
   - Implemented by _Stephen Lee_
