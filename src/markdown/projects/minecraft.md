@@ -28,7 +28,7 @@ As the final project for CIS 460 (Interactive Computer Graphics), my team and I 
 ### Milestone 1
 
 <a href="https://www.youtube.com/watch?v=SprDp1zjiAA" title="Milestone 1"><img src="../../images/minecraft/milestone-1.png" alt="Milestone 1" /></a>
-<a href="https://www.youtube.com/watch?v=SprDp1zjiAA" title="Milestone 1">Link to Milestone 1 Video Here</a>
+<a class="link" href="https://www.youtube.com/watch?v=SprDp1zjiAA" title="Milestone 1">Link to Milestone 1 Video Here</a>
 
 - **Procedurally Generated Terrain (rolling hills, mountain caps, etc.)**
   - Implemented by _William Goeller_
