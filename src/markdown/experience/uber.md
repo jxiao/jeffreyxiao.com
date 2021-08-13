@@ -2,7 +2,7 @@
 start: "May 2021"
 end: "August 2021"
 company: "Uber"
-title: "Software Engineer Intern"
+title: "Software Engineering Intern"
 location: "San Francisco, CA"
 image: "../../images/uber.png"
 order: 0
