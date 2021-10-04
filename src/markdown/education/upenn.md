@@ -7,4 +7,5 @@ location: "Philadelphia, PA"
 order: 0
 ---
 
-- Candidate for BSE in Computer Science
+- Candidate for BSE in Computer Science (Spring 2023)
+- Candidate for MSE in Computer Science (Winter 2023)
