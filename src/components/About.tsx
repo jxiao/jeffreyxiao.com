@@ -36,7 +36,7 @@ const About = ({ dark }: AboutProps) => {
       </LinkedText>
       ,{" "}
       <LinkedText
-        href="https://www.seas.upenn.edu/~cis120/current/"
+        href="http://cis1200.org"
         target="_BLANK"
         rel="noopener noreferrer"
         dark={dark}

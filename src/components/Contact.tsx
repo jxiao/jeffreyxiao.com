@@ -69,6 +69,7 @@ const IconContainer = styled.div`
 
 const EMAIL_MARGIN = 2.5
 const TO_EMAIL = "jeffrey.xiao1@gmail.com"
+const DISABLE_FORM = true
 
 interface EmailState {
   email: string
@@ -140,6 +141,7 @@ class Contact extends React.Component<{}, EmailState> {
               required
               onChange={e => this.setState({ email: e.target.value })}
               style={{ width: `${50 - EMAIL_MARGIN / 2}%` }}
+              disabled={DISABLE_FORM}
             />
             <input
               type="text"
@@ -154,6 +156,7 @@ class Contact extends React.Component<{}, EmailState> {
             value={this.state.subject}
             placeholder="Subject"
             onChange={e => this.setState({ subject: e.target.value })}
+            disabled={DISABLE_FORM}
           />
           <ContentSubmitContainer>
             <ContentArea
@@ -162,8 +165,11 @@ class Contact extends React.Component<{}, EmailState> {
               rows={5}
               value={this.state.content}
               onChange={e => this.setState({ content: e.target.value })}
+              disabled={DISABLE_FORM}
             />
-            <SubmitButton type="submit">SEND</SubmitButton>
+            <SubmitButton type="submit" disabled={DISABLE_FORM}>
+              SEND
+            </SubmitButton>
           </ContentSubmitContainer>
         </FormContainer>
         <IconContainer>
