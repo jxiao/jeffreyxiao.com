@@ -65,20 +65,20 @@ const Skills = () => {
           <Group>
             <H4 dark={theme.dark}>General</H4>
             <Skill>
-              <JavaIcon height={M5} />
-              <P>Java</P>
-            </Skill>
-            <Skill>
               <TypeScriptIcon height={M5} />
               <P>TypeScript</P>
+            </Skill>
+            <Skill>
+              <CPlusPlusIcon height={M5} />
+              <P>C / C++</P>
             </Skill>
             <Skill>
               <PythonIcon height={M5} />
               <P>Python</P>
             </Skill>
             <Skill>
-              <CPlusPlusIcon height={M5} />
-              <P>C / C++</P>
+              <JavaIcon height={M5} />
+              <P>Java</P>
             </Skill>
             <Skill>
               <OCamlIcon height={M5} />
