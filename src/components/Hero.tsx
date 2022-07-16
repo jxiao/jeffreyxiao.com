@@ -104,7 +104,7 @@ const Hero = () => {
           />
         </HeadshotWrapper>
         <Biography>
-          <h1 id={"headshot"}>Hi, I'm Jeffrey Xiao!</h1>
+          <h1 id={"headshot"}>🙋‍♂️ Hi, I'm Jeffrey Xiao! 👋</h1>
           <h3 id={"sub"}>CS @ UPenn</h3>
           {/* <div className="headshots" style={{ overflow: "hidden" }}>
             <Img

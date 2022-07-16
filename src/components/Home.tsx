@@ -128,14 +128,14 @@ const Home = () => {
       {theme => (
         <>
           <Hero />
-          <TableOfContents />
+          {/* <TableOfContents /> */}
           <Section id={"About"} dark={theme.dark} excludeHeader={true}>
             <About dark={theme.dark ? 1 : 0} />
           </Section>
           <Section
             title={"Projects"}
             id={"projects"}
-            // subtitle={"(click for additional info)"}
+            subtitle={"(click for additional info)"}
             dark={theme.dark}
           >
             <Projects />
