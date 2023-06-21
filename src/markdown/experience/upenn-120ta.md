@@ -7,13 +7,14 @@ location: "Philadelphia, PA"
 image: "../../images/upenn.png"
 order: 2
 parts: 2
-titles: ["Head Teaching Assistant: CIS120", "Teaching Assistant: CIS120"]
+titles: ["Head Teaching Assistant: CIS1200", "Teaching Assistant: CIS120"]
 dates: ["April 2021 - Present", "January 2020 - April 2021"]
-descriptions:
-  [
+descriptions: [
     [
       "Oversee course development, TA hiring, and logistics",
       "Work directly with instructors to manage course and TAs",
+      # "Awarded 2023 CIS Faculty Appreciation Award",
+      # "Inducted into Max Mintz Undergraduate TA Hall of Fame",
     ],
     [
       "Head of Piazza Committee",

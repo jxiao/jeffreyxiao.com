@@ -16,7 +16,8 @@ const AboutContainer = styled.div`
 const About = ({ dark }: AboutProps) => {
   return (
     <AboutContainer>
-      I'm a Senior at the University of Pennsylvania studying{" "}
+      I'm a new alumnus of the University of Pennsylvania, graduating with a
+      degree in{" "}
       <LinkedText
         href="https://www.cis.upenn.edu/"
         target="_BLANK"
