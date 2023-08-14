@@ -1,6 +1,6 @@
 ---
 start: "September 2020"
-end: "Present"
+end: "May 2023"
 company: "Penn Labs"
 title: "Frontend Engineer"
 location: "Philadelphia, PA"

@@ -104,6 +104,17 @@ const Entry = ({
       const description = descriptions[i]
       const tags = []
       description.forEach(tag =>
+        // tags.push(
+        //   <li
+        //     key={tag}
+        //     style={{ listStyleType: "disc" }}
+        //     dangerouslySetInnerHTML={{
+        //       __html: tag.replace(
+        //         /\[([^\]]+)\]\(([^)]+)\)/g,
+        //         '<a href="$2" target="_BLANK" rel="noopener noreferrer">$1</LinkedText>'
+        //       ),
+        //     }}
+        //   ></li>
         tags.push(
           <li key={tag} style={{ listStyleType: "disc" }}>
             {tag}

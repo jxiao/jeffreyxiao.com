@@ -7,6 +7,7 @@ location: "Philadelphia, PA"
 order: 0
 ---
 
-- Candidate for BSE in Computer Science (Spring 2023)
-- Candidate for MSE in Computer Science (Fall 2023)
+- BSE in Computer Science (Spring 2023)
+- MSE in Computer Science (Fall 2023)
 - Minor in Mathematics
+- Graduated Summa Cum Laude

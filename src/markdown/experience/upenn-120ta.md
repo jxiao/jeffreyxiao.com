@@ -13,8 +13,9 @@ descriptions: [
     [
       "Oversee course development, TA hiring, and logistics",
       "Work directly with instructors to manage course and TAs",
-      # "Awarded 2023 CIS Faculty Appreciation Award",
-      # "Inducted into Max Mintz Undergraduate TA Hall of Fame",
+      "Awarded 2023 CIS Faculty Appreciation Award",
+      "Inducted into Max Mintz Undergraduate TA Hall of Fame",
+      # "Inducted into [Max Mintz Undergraduate TA Hall of Fame](https://www.cis.upenn.edu/ta-information/ta-hall-of-fame/)",
     ],
     [
       "Head of Piazza Committee",
