@@ -55,7 +55,7 @@ const SubmitButton = styled.button`
 
 const IconContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   flex-grow: 1;
@@ -131,7 +131,7 @@ class Contact extends React.Component<{}, EmailState> {
   render() {
     return (
       <ContactContainer>
-        <FormContainer onSubmit={e => this.handleSubmit(e)} autoComplete="off">
+        {/* <FormContainer onSubmit={e => this.handleSubmit(e)} autoComplete="off">
           <EmailContainer>
             <input
               type="email"
@@ -171,7 +171,7 @@ class Contact extends React.Component<{}, EmailState> {
               SEND
             </SubmitButton>
           </ContentSubmitContainer>
-        </FormContainer>
+        </FormContainer> */}
         <IconContainer>
           <a
             href="https://github.com/jxiao"
@@ -180,6 +180,10 @@ class Contact extends React.Component<{}, EmailState> {
           >
             <GitHubIcon height={"50"} fill={"#000000"} />
           </a>
+          <span>
+            <b>Email: </b>jeffrey [dot] xiao1 [at] gmail [dot] com
+          </span>
+
           <a
             href="https://www.linkedin.com/in/jeffrey-xiao/"
             target="_BLANK"

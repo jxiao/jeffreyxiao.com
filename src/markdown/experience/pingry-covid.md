@@ -11,4 +11,4 @@ parts: 1
 
 - Developed and maintained a public-facing COVID-19 dashboard to inform the Pingry community of the school’s reopening status and confirmed cases at the state, county and internal levels
 - Used by entire Pingry community (students, faculty, parents) since the Fall 2020
-- Currently maintained and monitored during 2021-2022 academic year
+- Maintained and monitored during 2021-2022 academic year

@@ -8,7 +8,7 @@ image: "../../images/upenn.png"
 order: 2
 parts: 2
 titles: ["Head Teaching Assistant: CIS1200", "Teaching Assistant: CIS120"]
-dates: ["April 2021 - Present", "January 2020 - April 2021"]
+dates: ["April 2021 - December 2023", "January 2020 - April 2021"]
 descriptions: [
     [
       "Oversee course development, TA hiring, and logistics",

@@ -6,7 +6,7 @@ link: "http://dashboard.pingryanywhere.org/"
 repo: "https://github.com/jxiao/Pingry-Covid-External-Dashboard"
 tech-stack: ["React", "Node", "Express", "MongoDB"]
 start: "August 2020"
-end: "Present"
+end: "December 2021"
 image: "../../images/pingry-covid-dashboard/pingry-covid-dash.png"
 collaborators:
   [
