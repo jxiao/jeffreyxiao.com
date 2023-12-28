@@ -6,6 +6,12 @@ tech-stack: ["Java", "HTML", "CSS"]
 start: "November 2023"
 end: "December 2023"
 image: "../../images/skysift/pizza.png"
+collaborators:
+  [
+    '<a class="link" href="https://www.linkedin.com/in/vishaalpkumar/" target="_BLANK">Vishaal Kumar</a>',
+    '<a class="link" href="https://www.linkedin.com/in/lorenzo-lucena-maguire/" target="_BLANK">Lorenzo Lucena Maguire</a>',
+    '<a class="link" href="https://www.linkedin.com/in/bilal-ali1/" target="_BLANK">Bilal Ali</a>',
+  ]
 color: "rgb(211,227,253)"
 order: -2
 status: "Inactive"
