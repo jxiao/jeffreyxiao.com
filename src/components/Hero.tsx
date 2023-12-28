@@ -105,7 +105,7 @@ const Hero = () => {
         </HeadshotWrapper>
         <Biography>
           <h1 id={"headshot"}>Hi, I'm Jeffrey Xiao!</h1>
-          <h3 id={"sub"}>(Incoming) SWE @ MongoDB</h3>
+          <h3 id={"sub"}>(Formerly) CS @ UPenn</h3>
           {/* <div className="headshots" style={{ overflow: "hidden" }}>
             <Img
               fluid={data.prof.childImageSharp.fluid}
