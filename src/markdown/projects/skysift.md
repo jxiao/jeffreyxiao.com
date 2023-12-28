@@ -3,8 +3,8 @@ title: "SkySift"
 description: "Final Project for CIS5550: distributed search engine consisting of a web server, key-value store, analytics engine, and web crawler"
 path: "/projects/skysift"
 tech-stack: ["Java", "HTML", "CSS"]
-start: "April 2023"
-end: "May 2023"
+start: "November 2023"
+end: "December 2023"
 image: "../../images/skysift/pizza.png"
 color: "rgb(211,227,253)"
 order: -2
