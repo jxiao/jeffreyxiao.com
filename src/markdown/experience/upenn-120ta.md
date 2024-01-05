@@ -1,6 +1,6 @@
 ---
-start: "January 2020"
-end: "Present"
+# start: "January 2020"
+# end: "December 2023"
 company: "University of Pennsylvania"
 title: "Teaching Assistant: CIS120"
 location: "Philadelphia, PA"

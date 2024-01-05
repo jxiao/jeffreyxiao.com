@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { FluidObject } from "gatsby-image"
 import Card from "./Card"
+import { useLocation } from "@reach/router"
 
 interface ProjectsNode {
   node: {
@@ -27,6 +28,8 @@ interface ProjectsNode {
     }
   }
 }
+
+const MAX_NUMBER_OF_PROJECTS_ON_HOME_PAGE = 3
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -65,6 +68,7 @@ const Projects = () => {
     }
   `)
   const { edges } = data.allMarkdownRemark
+  const location = useLocation()
   return (
     <>
       {(edges as ProjectsNode[]).map(
@@ -89,6 +93,12 @@ const Projects = () => {
           },
           index
         ) => {
+          if (
+            location.pathname === "/" &&
+            index >= MAX_NUMBER_OF_PROJECTS_ON_HOME_PAGE
+          ) {
+            return null
+          }
           const fluid = image?.childImageSharp?.fluid
 
           const subtitle = [
