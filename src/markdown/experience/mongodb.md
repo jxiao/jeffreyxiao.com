@@ -17,7 +17,7 @@ dates:
   [
     "January 2024 - Present",
     "June 2023 - August 2023",
-    "June 2022 - August 2023",
+    "June 2022 - August 2022",
   ]
 descriptions:
   [
