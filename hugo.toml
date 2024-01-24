@@ -35,7 +35,7 @@ enableEmoji     = true
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   #
-  gitUrl = ""
+  gitUrl = "https://github.com/jxiao/Personal-Website/commit/"
 
   [params.portrait]  
     path = "/images/headshot.jpeg"
