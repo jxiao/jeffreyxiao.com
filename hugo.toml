@@ -55,7 +55,7 @@ enableEmoji     = true
 
   [[params.social]]
     name = "case"
-    url = ""
+    url = "/resume"
 
   [params.footer]
     trademark = 2024

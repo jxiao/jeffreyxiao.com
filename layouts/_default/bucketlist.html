@@ -9,22 +9,35 @@
         {{ end }}
 
         <div class="triple">
-            {{ $statuses := slice "todo" "in-progress" "completed" }}
-            {{ $colors := slice "#FF6F61" "#FFD700" "#2ECC71" }}
+            {{ $statuses := slice "to do" "in progress" "done" }}
+            <!-- {{ $statusColorMap := index site.Data.bucketListColors 0 }} -->
+            {{ $categoryMap := index site.Data.colors "categories" }}
             {{ range $index, $status := $statuses }}
                 <div class="col">
-                    <h2 style="width: fit-content; padding: 0.5rem; border-radius: 1rem; border: 0.5px solid grey; margin-top: 0px; text-decoration: underline; background-color: {{ index $colors $index}}">{{ $status | title }}</h2>
                     {{ $posts := where $paginator.Pages "Params.status" "eq" $status }}
+                    <h2 style="font-size: 1.3rem; width: fit-content; padding: 0.5rem; border-radius: 0.4rem; margin-top: 0px;">{{ $status | title }} ({{len $posts}})</h2>
                     {{ if ( gt ( len $posts ) 0 ) }}
-                    <ul>
                     {{ range sort $posts "Date" }}
-                        <li>
-                        <a href="{{ .Permalink }}">{{ .Title }}</a><!-- - {{ .Date.Format "Jan 2, 2006" }}-->
-                        </li>
+                    <a href="{{ .Permalink }}" style="text-decoration: none;">
+                        <span class="card" >
+                            <div>{{ .Title }}<!-- - --></div>
+                            <div class="date-badge">{{ .Date.Format "Jan 2" }}</div>
+                            {{site.Data.categoryColors}}
+                            <div class="category-container">
+                                {{range $i, $category := .Params.categories}}
+                                    {{ with index $categoryMap $category }}
+                                        <div class="category-badge" style="background-color: {{.bgcolor}}; color: {{.color}}">#{{ $category }}</div>
+                                    {{else}}
+                                    <div class="category-badge">#{{ $category }}</div>
+                                    {{end}}
+                                {{end}}
+                            </div>
+                        
+                        </span>
+                    </a>
                     {{ end }}
-                    </ul>
                     {{ else }}
-                    None (for now...)
+                    <!-- None (for now...) -->
                     {{ end }}
                 </div>
             {{ end }}
