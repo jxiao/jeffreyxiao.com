@@ -1,0 +1,102 @@
+baseURL      = 'https://jeffreyxiao.com/'
+languageCode = 'en-us'
+title        = 'Jeffrey Xiao'
+theme        = "hello-friend-ng"
+paginate     = 10
+
+enableRobotsTXT = true
+enableGitInfo   = true
+enableEmoji     = true
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # Subtitle for home
+  # homeSubtitle = "A simple and beautiful blog"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = false
+
+  enableThemeToggle = true
+  
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = false
+
+  # Metadata mostly used in document's head
+  description = "Jeffrey Xiao's Personal Page"
+  keywords = "homepage, bucketlist, blog, bio"
+  images = [""]
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  #
+  gitUrl = ""
+
+  [params.portrait]  
+    path = "/images/headshot.jpeg"
+    alt = "headshot"
+
+  [[params.social]]
+    name = "email"
+    url = "mailto:jeffrey.xiao1@gmail.com"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/jxiao"
+
+  [[params.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/jeffrey-xiao/"
+
+  [[params.social]]
+    name = "case"
+    url = ""
+
+  [params.footer]
+    trademark = 2024
+    rss = false
+    copyright = true
+    author = false
+
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+[languages]
+  [languages.en]
+    title = "Jeffrey Xiao"
+    keywords = "jeffrey, xiao"
+    copyright = 'Jeffrey Xiao'
+
+    [languages.en.params.logo]
+      logoText = "/"
+      logoHomeLink = "/"
+      # Set to a valid CSS color to change the cursor in the logo.
+      logoCursorColor    = "#90EE90"
+      # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+      logoCursorAnimate  = "1.5s"
+      # Append the current url pathname to logoText 
+      logoCursorPathname = false
+
+    headshot = "/images/headshot.jpg"
+
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/blog"
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
+  [[menu.main]]
+    identifier = "bucketlist"
+    name       = "Bucket List"
+    url        = "/bucketlist"
