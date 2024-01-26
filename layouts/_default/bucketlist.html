@@ -19,7 +19,12 @@
                     <a href="{{ .Permalink }}" style="text-decoration: none;">
                         <span class="card" >
                             <div>{{ .Title }}<!-- - --></div>
-                            <div class="date-badge">{{ .Date.Format "Jan 2" }}</div>
+                            <div class="date-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="0.75rem" height="0.75rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock" style="position: relative; top: 0.1rem;">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                {{ .Date.Format "Jan 2" }}</div>
                             {{site.Data.categoryColors}}
                             <div class="category-container">
                                 {{range $i, $category := .Params.categories}}
