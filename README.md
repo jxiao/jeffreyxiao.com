@@ -12,10 +12,10 @@ Theme: inspired from https://themes.gohugo.io/themes/hugo-theme-hello-friend-ng/
 
 ## Features
 ### Navbar
-- [ ] Top left -> working directory of page
+- [x] Top left -> working directory of page
 ### Home Page
-- [ ] Name and profile picture
-- [ ] Quick buttons to external/profile sites (eg. GitHub, LinkedIn, Mail, Resume)
+- [x] Name and profile picture
+- [x] Quick buttons to external/profile sites (eg. GitHub, LinkedIn, Mail, Resume)
 - [ ] Brief blurb
 ### About Page
 - [ ] Brief description of me, projects worked on
@@ -29,5 +29,4 @@ Theme: inspired from https://themes.gohugo.io/themes/hugo-theme-hello-friend-ng/
 ### Blog Page
 - Similar to https://pawa.lt/posts/
 - [ ] Simple page, short preview of each entry
-    - Broken 
     - Hopefully, this pushes me to blog/write more

@@ -1,6 +1,4 @@
 {{ define "main" }}
-    {{ $paginator := .Paginate (where .Data.Pages "Type" "bucketlist") }}
-    
     <main class="posts">
         <h1>{{ .Title }}</h1>
 
@@ -8,16 +6,16 @@
             <div class="content">{{ .Content }}</div>
         {{ end }}
 
+        {{$items := where .Site.Pages "Section" "bucketlist"}}
         <div class="triple">
             {{ $statuses := slice "to do" "in progress" "done" }}
-            <!-- {{ $statusColorMap := index site.Data.bucketListColors 0 }} -->
             {{ $categoryMap := index site.Data.colors "categories" }}
             {{ range $index, $status := $statuses }}
                 <div class="col">
-                    {{ $posts := where $paginator.Pages "Params.status" "eq" $status }}
+                    {{ $posts := where $items "Params.status" "eq" $status }}
                     <h2 style="font-size: 1.3rem; width: fit-content; padding: 0.5rem; border-radius: 0.4rem; margin-top: 0px;">{{ $status | title }} ({{len $posts}})</h2>
                     {{ if ( gt ( len $posts ) 0 ) }}
-                    {{ range sort $posts "Date" }}
+                    {{ range sort $posts "Date" "desc" }}
                     <a href="{{ .Permalink }}" style="text-decoration: none;">
                         <span class="card" >
                             <div>{{ .Title }}<!-- - --></div>
@@ -42,6 +40,5 @@
                 </div>
             {{ end }}
         </div>
-    {{ partial "pagination-list.html" . }}
     </main>
 {{ end }}

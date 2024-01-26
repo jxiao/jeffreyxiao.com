@@ -2,7 +2,7 @@ baseURL      = ''
 languageCode = 'en-us'
 title        = 'Jeffrey Xiao'
 theme        = "hello-friend-ng"
-paginate     = 10
+paginate     = 2
 
 enableRobotsTXT = true
 enableGitInfo   = true

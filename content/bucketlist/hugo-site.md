@@ -1,9 +1,9 @@
 +++
-title = 'Build a PC'
-date = 2024-01-01
+title = 'Rebuild Site in Hugo'
+date = 2024-01-24
 draft = false
 status = "in progress"
 categories = ["project"]
-tags = ["pc", "building"]
+tags = ["hugo", "webdev"]
 # section="bucketlist"
 +++
