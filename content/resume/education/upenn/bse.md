@@ -1,7 +1,6 @@
 +++
 degree= "BSE"
-field= "Computer Science"
-minor= "Math"
+field= "Computer Science, Minor in Math"
 institution= "University of Pennsylvania"
 graduation= 2023-05-13
 gpa= 3.99

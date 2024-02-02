@@ -8,6 +8,12 @@ categories:
     travel:
         bgcolor: "#2A9D8F"
         color: "black"
+    learning:
+        bgcolor: "#E9C46A"
+        color: "black"
+    exercise:
+        bgcolor: "#cbf3f0"
+        color: "black"
 
 status:
     to do:
