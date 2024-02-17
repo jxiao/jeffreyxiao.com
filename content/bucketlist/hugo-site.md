@@ -1,13 +1,17 @@
 +++
 title = 'Rebuild Site in Hugo'
-date = 2024-01-24
+date = 2024-02-16
 start = 2024-01-23
 draft = false
-status = "in progress"
+status = "done"
 categories = ["project"]
 tags = ["hugo", "webdev"]
 # section="bucketlist"
 +++
+
+Work in progress, but felt like releasing this...
+
+Here's some screenshots of my old sites, more details to come.
 
 <!-- "Built" first personal website in high school using wordpress -->
 
