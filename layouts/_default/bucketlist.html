@@ -1,0 +1,49 @@
+{{ define "main" }}
+    <main class="posts">
+        <h1>{{ .Title }}</h1>
+
+        {{ if .Content }}
+            <div class="content">{{ .Content }}</div>
+        {{ end }}
+
+        {{$items := where .Site.Pages "Section" "bucketlist"}}
+        <div class="triple">
+            {{ $statuses := slice "to do" "in progress" "done" }}
+            {{ $categoryMap := index site.Data.colors "categories" }}
+            {{ range $index, $status := $statuses }}
+                <div class="col">
+                    {{ $posts := where $items "Params.status" "eq" $status }}
+                    <h2 style="font-size: 1.3rem; width: fit-content; padding: 0.5rem; border-radius: 0.4rem; margin-top: 0px;">{{ $status | title }} ({{len $posts}})</h2>
+                    {{ if ( gt ( len $posts ) 0 ) }}
+                    {{ range sort $posts "Date" "desc" }}
+                    <a href="{{ .Permalink }}" style="text-decoration: none;">
+                        <span class="card" >
+                            <div>{{ .Title }}<!-- - --></div>
+                            <div class="date-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="0.75rem" height="0.75rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock" style="position: relative; top: 0.1rem;">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                {{ .Date.Format "Jan 2" }}</div>
+                            {{site.Data.categoryColors}}
+                            <div class="category-container">
+                                {{range $i, $category := .Params.categories}}
+                                    {{ with index $categoryMap $category }}
+                                        <div class="category-badge" style="background-color: {{.bgcolor}}; color: {{.color}}">#{{ $category }}</div>
+                                    {{else}}
+                                    <div class="category-badge">#{{ $category }}</div>
+                                    {{end}}
+                                {{end}}
+                            </div>
+                        
+                        </span>
+                    </a>
+                    {{ end }}
+                    {{ else }}
+                    <!-- None (for now...) -->
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </main>
+{{ end }}

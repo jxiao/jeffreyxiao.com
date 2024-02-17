@@ -1,0 +1,27 @@
+# Mapping from category to colors
+# https://coolors.co/palette/264653-2a9d8f-e9c46a-f4a261-e76f51
+
+categories:
+    project:
+        bgcolor: "#264653"
+        color: "white"
+    travel:
+        bgcolor: "#2A9D8F"
+        color: "black"
+    learning:
+        bgcolor: "#E9C46A"
+        color: "black"
+    fitness:
+        bgcolor: "#cbf3f0"
+        color: "black"
+
+status:
+    to do:
+        bgcolor: "#babec5"
+        color: "#4a5469"
+    in progress:
+        bgcolor: "#92b0e8"
+        color: "#154598"
+    done:
+        bgcolor: "#adb2bc"
+        color: "#30735c"

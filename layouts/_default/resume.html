@@ -1,0 +1,95 @@
+{{ define "main" }}
+    <main class="posts">
+        <h1>{{ .Title }}</h1>
+
+        {{ if .Content }}
+            <div class="content">{{ .Content }}</div>
+        {{ end }}
+
+        <div class="section">
+            <h2>Education 🏫</h2>
+            <hr>
+            {{range sort (where .Site.Pages "Params.section" "education") "Params.graduation" "desc"}}
+                <div class="entry">
+                    <div></div>
+                    <h4 class="entry-title">{{.Params.Institution}}</h4> - 
+                        {{.Params.Degree}} {{if .Params.field }} in {{.Params.field}} {{end}} {{if .Params.Minor}}, Minor in {{.Params.Minor}} {{end}}
+                        / {{time.Format "Jan 2006" (time.AsTime .Params.graduation)}}
+                    <div class="entry-content">
+                        {{.Content}}
+                    </div>
+                </div>
+            {{end}}
+        </div>
+
+        <div class="section">
+            <h2>Skills 🖥️</h2>
+            <hr>
+            {{range (where .Site.Pages "Params.section" "skills")}}
+                <div class="entry">
+                    <h4 class="entry-title">General: </h4>{{delimit (.Params.general) ", "}}<br>
+                    <h4 class="entry-title">Web: </h4>{{delimit (.Params.web) ", "}}<br>
+                    <h4 class="entry-title">Databases: </h4>{{delimit (.Params.databases) ", "}}<br>
+                </div>
+            {{end}}
+        </div>
+
+    
+
+        <div class="section">
+            <h2>Work Experience 💼</h2>
+            <hr>
+
+            <!-- Group and sort work experience by recency (groups) -->
+            {{ $pageGroups :=  (where .Site.Pages "Params.section" "work").GroupByParam "company" }}
+            {{ $sortedGroups := slice }}
+            {{ range $key, $group := $pageGroups }}
+                {{ $mostRecentDate := time.AsTime "2000-01-01" }}
+                {{ range $group.Pages }}
+                    {{if .Params.end}}
+                        {{$curr := (time.AsTime .Params.End)}}
+                        {{ $mostRecentDate = cond (ge $mostRecentDate $curr) $mostRecentDate $curr }}
+                    {{else}}
+                        {{$curr := time.Now}}
+                        {{ $mostRecentDate = cond (ge $mostRecentDate $curr) $mostRecentDate $curr }}
+                    {{end}}
+                {{ end }}
+                {{ $sortedGroups = $sortedGroups | append (dict "Group" $group "MostRecentDate" $mostRecentDate) }}
+            {{ end }}
+
+            {{range sort $sortedGroups "MostRecentDate" "desc"}}
+                <div class="entry">
+                    {{$first := index .Group.Pages 0}}
+                    {{$numSubentries := len .Group.Pages}}
+                    <h3 class="entry-title">{{$first.Params.company}}</h3> - {{$first.Params.location}}
+                    <ul>
+                        {{range $i, $x := .Group.Pages}}
+                        <span class="node-span"></span>
+                            <div class="subentry {{if lt $i (sub $numSubentries 1)}} pipe {{end}}">
+                                <div class="subentry-title">{{.Params.title}}</div>
+                                <div class="subentry-subtitle">{{time.Format "Jan 2006" (time.AsTime .Params.start)}} - {{if .Params.end}} {{time.Format "Jan 2006" (time.AsTime .Params.end)}} {{else}} Present {{end}}</div>
+                                <div class="subentry-content">{{.Content}}</div>
+                            </div>
+                        {{end}}
+                    </ul>
+                </div>
+            {{end}}
+
+            <!-- VERSION WITHOUT SIDE PIPES -->
+            <!-- {{range sort $sortedGroups "MostRecentDate" "desc"}}
+                <div class="entry">
+                    {{$first := index .Group.Pages 0}}
+                    {{$numSubentries := len .Group.Pages}}
+                    <h3 class="entry-title">{{$first.Params.company}}</h3> - {{$first.Params.location}}
+                    {{range $i, $x := .Group.Pages}}
+                        <div class="subentry">
+                            <div class="subentry-title">{{.Params.title}}</div>
+                            <div class="subentry-subtitle">{{time.Format "Jan 2006" (time.AsTime .Params.start)}} - {{if .Params.end}} {{time.Format "Jan 2006" (time.AsTime .Params.end)}} {{else}} Present {{end}}</div>
+                            <div class="subentry-content">{{.Content}}</div>
+                        </div>
+                    {{end}}
+                </div>
+            {{end}} -->
+        </div>
+    </main>
+{{ end }}
