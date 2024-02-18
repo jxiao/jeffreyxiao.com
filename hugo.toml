@@ -58,10 +58,11 @@ enableEmoji     = true
     url = "/resume"
 
   [params.footer]
-    trademark = 2024
+    trademark = "{year}"
     rss = false
     copyright = true
     author = false
+
 
 
 [taxonomies]

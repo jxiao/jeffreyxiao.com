@@ -18,10 +18,10 @@ categories:
 status:
     to do:
         bgcolor: "#babec5"
-        color: "#4a5469"
+        color: "#000"
     in progress:
         bgcolor: "#92b0e8"
-        color: "#154598"
-    done:
-        bgcolor: "#adb2bc"
-        color: "#30735c"
+        color: "#000"
+    completed:
+        bgcolor: "#50C878"
+        color: "#000"

@@ -8,7 +8,7 @@
 
         {{$items := where .Site.Pages "Section" "bucketlist"}}
         <div class="triple">
-            {{ $statuses := slice "to do" "in progress" "done" }}
+            {{ $statuses := slice "to do" "in progress" "completed" }}
             {{ $categoryMap := index site.Data.colors "categories" }}
             {{ range $index, $status := $statuses }}
                 <div class="col">
@@ -24,7 +24,7 @@
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <polyline points="12 6 12 12 16 14"></polyline>
                                 </svg>
-                                {{ .Date.Format "Jan 2" }}</div>
+                                {{ .Date.Format "Jan 2, 06" }}</div>
                             {{site.Data.categoryColors}}
                             <div class="category-container">
                                 {{range $i, $category := .Params.categories}}
