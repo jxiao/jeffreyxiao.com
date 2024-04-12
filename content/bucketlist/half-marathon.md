@@ -9,5 +9,5 @@ tags = ["running", "half-marathon"]
 +++
 
 Next up:
-- [x] [2024 RBC Brooklyn Half](https://www.nyrr.org/races/2024rbcbrooklynhalf)
+- [ ] [2024 RBC Brooklyn Half](https://www.nyrr.org/races/2024rbcbrooklynhalf)
 - [ ] [2024 NYRR Staten Island Half](https://www.nyrr.org/races/nyrrstatenislandhalf)
