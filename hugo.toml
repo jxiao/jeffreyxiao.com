@@ -54,6 +54,10 @@ enableEmoji     = true
     url = "https://www.linkedin.com/in/jeffrey-xiao/"
 
   [[params.social]]
+    name = "strava"
+    url = "https://www.strava.com/athletes/127876262"
+
+  [[params.social]]
     name = "case"
     url = "/resume"
 
