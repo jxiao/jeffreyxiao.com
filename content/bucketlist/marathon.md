@@ -8,4 +8,8 @@ categories = ["fitness"]
 tags = ["running", "marathon"]
 +++
 
-Pending: [half-marathon](/bucketlist/half-marathon/) results.
+2024 is the year for half-marathons.  2025 is the year for full marathons.
+
+## 2025
+- [ ] TCS NYC Marathon
+  - Guaranteed entry as part of the [2024 9+1 Program](/bucketlist/9-plus-1-2024).
