@@ -54,7 +54,7 @@ Immediately after dropping my bags off at the starting point, I met a bunch of o
 ![First MR Run](/images/blogs/run-clubs/first-MR.JPG)
 #### First MR Run (Feb 21)
 
-Remember when I said that 1-2 miles felt dreadful not too long ago?  To my surprise, that was far from the case. We started piling on the miles, and I didn't feel like I had to drag my legs every step of the way.  The music, energy, and excitement of running with almost a hundred other people on a brisk winter evening in Central Park seemed to put away any sort of fatigue. 
+Remember when I said that 1-2 miles felt dreadful not too long ago?  To my surprise, a 10K with MR didn't feel anywhere as draining. We started piling on miles, and I didn't feel like I had to drag my legs every step of the way.  The music, energy, and excitement of running with almost a hundred other people on a brisk winter evening in Central Park seemed to put away any sort of fatigue. 
 
 ![Midnight Runners: Shots by @rebeccamarks](/images/blogs/run-clubs/MR-merged.jpg)
 #### Left: MR Bootcamp Run at nightfall. Right: MR NYC's 6th Birthday Party Run (ft. Captain Jon and my MR shirt). Shots by Captain @rebeccamarks !
@@ -63,8 +63,16 @@ Since then, I've added MR to my weekly rotation.  Every Wednesday evening at 7pm
 
 ### Endorphins ⚡💙
 
+After a fantastic experience with MR, I knew I had to run with another group on the other days of the week.  As Sammy's other suggestion, [Endorphins](https://www.endorphinsrunning.com/) was next on the list for me.
 
-https://www.endorphinsrunning.com/
+If you attend any Endorphins run (they have **a lot** of events in cities across the country), you'll know that the mission of Endorphins is to spread positivity and happiness through movement and exercise.  The city leads and organizers start every run with that statement, setting the tone for a social and uplifting experience.  No matter where you are in the country, every Endorphins city starts the week with a Monday morning run.  Shockingly, up to a hundred people gather (in NYC) for this Monday run, gearing up for the week ahead with some miles and friends. Later in the week, Endorphins NYC hosts Wednesday evening speed workouts in Central Park, Thursday morning runs in Prospect Park, (occasionally) Thursday afternoon Happy Hour runs, and the signature Saturday morning long runs throughout the NYC boroughs.
+
+
+| **Monday** | **Wednesday** | **Thursday** | **Saturday** |
+|---|---|---|---|
+| - 6:45am morning run along WSH | - 6:30pm speed/threshold workout in CP | - 6:45am morning run in Prospect Park <br><br>- (Occasionally) 6pm happy hour runs along WSH | - 8am long run through NYC boroughs (specific route varies) |
+
+I love running with Endorphins.
 
 - Mission: Positivity and happiness through movement and exercise
 - Monday Mornings, Thursday Mornings, Saturday Long Runs, Happy Hour Runs
@@ -74,7 +82,7 @@ https://www.endorphinsrunning.com/
 ![8:30 crew](/images/blogs/run-clubs/endorphins-eight-thirty.jpg)
 #### **Endorphins 8:30 min/mi crew**
 
-![8:30 crew](/images/blogs/run-clubs/endorphins.jpg)
+![Endorphins Routes](/images/blogs/run-clubs/endorphins.jpg)
 #### **(Mostly) new routes every week!**
 
 ## Takeaways
