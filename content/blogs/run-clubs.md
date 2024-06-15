@@ -24,7 +24,7 @@ College is over. Not living at home in NJ anymore. Evenings and weekends are com
 Every November, Philly hosts a [marathon weekend](https://www.philadelphiamarathon.com/), taking runners through the landmarks, neighborhoods, and waterfronts of the historic city.  Participants can choose either the 8k, half (13.1 mi), or full (26.2 mi) marathon.  My close friend [Vishaal](https://vishaalpkumar.github.io/) and I had no plans to run. A half marathon? No thanks.  Our friend Na, on the other hand, felt no fear and breezed through her first half.  You can see it for yourself in the picture below; if it weren't for the heat sheet, you probably couldn't tell that she just ran 13.1 miles.
 
 ![Philly Half](/images/blogs/run-clubs/philly-half.png)
-#### Vishaal and I (spectators) with our friend Na after the Philly Half
+***Vishaal and I (spectators) with our friend Na after the Philly Half***
 
 Vishaal and I struggled (a bit) trying to find Na on the course and at the finish.  And while we didn't quite catch her until after the race, we did catch all of the energy and hype around the race.  Friends and family were flying all around the Philly Museum of Art; the organizers were blasting music through the speakers; posters and signs were held up high in an attempt to locate friends.  It was an incredible atmosphere, and I think it was that morning when I started to catch [the running bug](https://www.therunningmate.run/how-to-catch-running-bug/).  Why?  Within 2 weeks, I found myself shopping for running shoes, determined to get back into the sport since my HS race in 2019.
 
@@ -32,10 +32,10 @@ Vishaal and I struggled (a bit) trying to find Na on the course and at the finis
 
 A couple of weeks go by and the new year rolls around. Total mileage on my new shoes: 0.  As much as I wanted to get back into running, that first step felt just out of reach.  I'm the type of person that needs to work towards a goal.  It could be anything, but there has to be something to keep my in check.  At this point, I've already moved into NYC and heard from those around me about NYRR races selling out quickly.  This sounded like the perfect idea: sign up for a race.  So I called up Vishaal (who, by the way, is on the other side of the world at the time -- it was winter break for him) and got him on board.  Unfortunately, the only race open at that point was the [Staten Island Half](https://www.nyrr.org/races/nyrrstatenislandhalf).  Neither of us had run in years, and have never run for anywhere near 13.1 miles.  Still, we needed that extra bit of motivation -- we entered our personal info, paid the entry fee, and hit the submit button.  Couldn't back out anymore!
 
-I regretted that decision on the very same day. Having not run or done any significant form of cardio for about 4 years, I thought it'd be a good idea to start on the treadmill for a light 1-2 miles.  Let me be clear: those miles were anything but light.  If being out of shape wasn't enough of a challenge, the constant reminder on the treadmill display that the distance covered was barely increasing added to my frustration.  
+I regretted that decision on the very same day. Having not run or done any significant form of cardio for about 4 years, I thought it'd be a good idea to start on the treadmill for a light 1-2 miles.  Let me be clear: those miles were anything but light.  If being out of shape wasn't enough of a challenge, the constant reminder on the treadmill display that the distance covered was barely increasing added to my frustration.  I was basically sprinting the entire time (same face and form as middle school me in the picture below) -- which would be cool if it were the last 100m of a race, but not so much on a treadmill in a local gym.
 
-![Dreadmill](/images/blogs/run-clubs/dreadmill.jpg)
-#### Running on the dreadmill
+![Sprinting and Dreadmill](/images/blogs/run-clubs/dreadmill-with-baby-jeff.jpg)
+***Left: Middle school Jeff gunning for the finish, probably. Right: Dreadmill shenanigans***
 
 If I had to run on the treadmill every time until the Staten Island Half, I would've quit again. My body refused to get back on that machine unless there was some natural disaster going on outside.
 
@@ -52,12 +52,12 @@ My first run was on February 21st.  A chilly day under the pitch black winter sk
 Immediately after dropping my bags off at the starting point, I met a bunch of other runners, all excited to chat and get to know one another.  Captains went around making sure participants checked-in on their app (10 check-ins and you get a free MR shirt!) while others got a head start on dynamic warmups.  A few minutes later, the captains synced up their speakers, put on the first song of the night, and were off to races (not really a race, but the idiom was too good not to put here). 
 
 ![First MR Run](/images/blogs/run-clubs/first-MR.JPG)
-#### First MR Run (Feb 21)
+***First MR Run (Feb 21)***
 
 Remember when I said that 1-2 miles felt dreadful not too long ago?  To my surprise, a 10K with MR didn't feel anywhere as draining. We started piling on miles, and I didn't feel like I had to drag my legs every step of the way.  The music, energy, and excitement of running with almost a hundred other people on a brisk winter evening in Central Park seemed to put away any sort of fatigue. 
 
 ![Midnight Runners: Shots by @rebeccamarks](/images/blogs/run-clubs/MR-merged.jpg)
-#### Left: MR Bootcamp Run at nightfall. Right: MR NYC's 6th Birthday Party Run (ft. Captain Jon and my MR shirt). Shots by Captain @rebeccamarks !
+***Left: MR Bootcamp Run at nightfall.  Right: MR NYC's 6th Birthday Party Run (ft. Captain Jon and my MR shirt). Shots by Captain [@rebeccamarks](http://instagram.com/rebeccamarks) !***
 
 Since then, I've added MR to my weekly rotation.  Every Wednesday evening at 7pm, I, along with hundreds of others, do a loop around Central Park (but not Harlem Hill, no thanks), taking in the scenery and music the entire way through.  As the weather gets better and the sun sets later, the MR crowd grows.  Every week, I see new runners join the club (as well as familiar faces that have been with the org for years).  To think I was in the same spot not long ago, looking for a group to run with and have a good time, is a crazy feeling.  If you're ever in the city during the week, definitely join us for a run on Wednesday evening at 7pm (all skill levels welcome) - the more the merrier!
 
@@ -72,21 +72,20 @@ If you attend any Endorphins run (they have **a lot** of events in cities across
 |---|---|---|---|
 | - 6:45am morning run along WSH | - 6:30pm speed/threshold workout in CP | - 6:45am morning run in Prospect Park <br><br>- (Occasionally) 6pm happy hour runs along WSH | - 8am long run through NYC boroughs (specific route varies) |
 
-I love running with Endorphins.
-
-- Mission: Positivity and happiness through movement and exercise
-- Monday Mornings, Thursday Mornings, Saturday Long Runs, Happy Hour Runs
-- Global Running Day
-- Queens 10K Lottery
+I love running with this club. Don't get me wrong: waking up on Monday mornings can be a struggle (especially during the cold winter months when the sun hasn't come up) and catching the 2/3 train to Grand Army Plaza on Thursday mornings isn't ideal (haven't quite reached the stage of running to every starting location yet). That being said, I've always finished an Endorphins run feeling excited and ready to tackle on the rest of the day (my legs sometimes say otherwise though).  
 
 ![8:30 crew](/images/blogs/run-clubs/endorphins-eight-thirty.jpg)
-#### **Endorphins 8:30 min/mi crew**
+***Shoutout to the Endorphins 8:30 min/mi crew***
+
+Saturday long runs are exciting since the route changes on a weekly basis.  Sometimes, we tackle the [BMW bridges](http://www.giginyc.net/2014/01/three-bridges-walk-brooklyn-manhattan.html#:~:text=Often%20referred%20to%20as%20BMW,is%20a%20little%20bit%20further.) into/out of Brooklyn.  Other times, we'll stick within Manhattan and jog along the WSH, ending with a loop around Central Park.  We've even done a route through 3 of NYC's boroughs: from Manhattan into Brooklyn, then into Queens, and ending back in Manhattan (fun fact: this was actually the route of my first run with the group!). Variety is, in my opinion, so crucial to keeping up with the pace of the sport -- and Endorphins does a great job at mixing things up, all while keeping the same lively energy.
 
 ![Endorphins Routes](/images/blogs/run-clubs/endorphins.jpg)
-#### **(Mostly) new routes every week!**
+***Just a couple of long-run routes***
+
+Even more, Endorphins constantly has cool events or news going on.  Recently, to celebrate [Global Running Day](https://globalrunningday.org/), the club (all around the country) got together in the morning for a jog along WSH, ending with free coffee at a local cafe. Oh, and free New Balance x Endorphins shirts! In a couple of weeks, Endorphins is headed to [Citi Field](https://www.mlb.com/mets/ballpark) for a Mets game, and Endorphins members are invited on the field.  There's so much happening all the time (I need to read the weekly announcements carefully so I don't end up with FOMO) -- can't wait for what's to come as the fall racing season approaches.
 
 ## Takeaways
 
-Strava
+At the end of the day, I'm just glad to be running again -- I really missed the energy of the sport and people in the community. Attending MR and Endorphins runs are some of my highlights of each week, and I look forward to many, many more runs with them.  If you're thinking about running, regardless of your skill level / base, I encourage you to try out a local run club -- it'll make the transition much smoother.  And hey, you might become a big run club fan as well 🤷.
 
-![Middle School Jeff](/images/blogs/run-clubs/baby-jeff.PNG)
+*Oops, one more thing: shameless plug for my [Strava](https://www.strava.com/athletes/127876262) in case you're curious about where I'm at* 😁
