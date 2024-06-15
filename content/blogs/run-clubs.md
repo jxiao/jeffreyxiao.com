@@ -77,7 +77,7 @@ I love running with this club. Don't get me wrong: waking up on Monday mornings 
 
 Saturday long runs are exciting since the route changes on a weekly basis.  Sometimes, we tackle the [BMW bridges](http://www.giginyc.net/2014/01/three-bridges-walk-brooklyn-manhattan.html#:~:text=Often%20referred%20to%20as%20BMW,is%20a%20little%20bit%20further.) into/out of Brooklyn.  Other times, we'll stick within Manhattan and jog along the WSH, ending with a loop around Central Park.  We've even done a route through 3 of NYC's boroughs: from Manhattan into Brooklyn, then into Queens, and ending back in Manhattan (fun fact: this was actually the route of my first run with the group!). Variety, in my opinion, is so crucial to keeping up with the pace of the sport -- and Endorphins does a great job at mixing things up, all while keeping the same lively energy.
 
-![Endorphins Routes](/images/blogs/run-clubs/endorphins.jpg)
+![Endorphins Routes](/images/blogs/run-clubs/endorphins-long-run-routes.jpg)
 ***Just a couple of long-run routes***
 
 Even more, Endorphins constantly has cool events or news going on.  Recently, in celebration of [Global Running Day](https://globalrunningday.org/), the club (in all cities around the country) got together in the morning for a jog along WSH, ending with free coffee at a local cafe. Oh, and free New Balance x Endorphins shirts! In a couple of weeks, Endorphins is headed to [Citi Field](https://www.mlb.com/mets/ballpark) for a Mets game, and Endorphins members will have on field access.  There's so much happening all the time (I need to read the weekly announcements carefully so I don't end up with FOMO) -- can't wait for what's to come as the fall racing season approaches.
@@ -89,3 +89,10 @@ At the end of the day, I'm just glad to be running again -- I really missed the 
 That's all for now!  I'll be back with updates on the other parts of my life "soon" (could be another 5 months to be honest).
 
 *One more thing: shameless plug for my [Strava](https://www.strava.com/athletes/127876262) in case you're curious about where I'm at* 😁
+
+### Honorable Mention: JP Morgan Corporate Challenge
+
+![JP Morgan Corporate Challenge](/images/blogs/run-clubs/mongo-corporate-challenge.PNG)
+***JP Morgan Corporate Challenge with MongoDB***
+
+JPMorgan hosts an annual 3.5 mile race in the back half of Central Park for companies to take part in.  It was a fun social event with coworkers, but if you're planning on actually racing, lower your expectations. With 25,000+ participants spread out across two days, you'll find yourself weaving through runners, joggers, and walkers for at least the first 1-1.5 miles (and then you're at Harlem Hill).
