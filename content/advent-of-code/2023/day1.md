@@ -1,9 +1,11 @@
 +++
 title="Day 1: Trebuchet?!"
-date=2023-12-01T00:00:00-04:00
-draft=true
+date=2023-12-01T00:00:00-05:00
+draft=false
 toc=false
 tags=["aoc", "ocaml", "dev"]
+layout="aoc"
+puzzle="https://adventofcode.com/2023/day/1"
 +++
 
 FYI: the date of this article may say December 1st, 2023, but I'm actually writing this mid-way through 2024. Sorry!
@@ -13,9 +15,6 @@ I learned about Advent of Code in 2020 during Covid and found it to be a fun exe
 I'm a couple months out of college now and find myself missing some of the functional programming I had done over the years (OCaml) -- so I figure now would be a good time to pick it up again.  I'll be going through last year (2023)'s puzzles and solving them in OCaml.  Most of the solutions will be written with the standard library -- although I may attempt to use other libraries like `Base` or `Core` in a few problems here and there.  Without further ado, let's get into Day 1!
 
 ---
-
-### **[Puzzle](https://adventofcode.com/2023/day/1)**
-
 
 ## Part 1
 
@@ -40,7 +39,7 @@ Part 2 requires a bit more tinkering.  With the remaining string left after Part
 
 Implementation-wise, I wanted to take advantage of OCaml's beautiful pattern-matching structure.  Each `string` will be converted into a `char list`, allowing us to match on the list and step through one at a time.
 
-```ml
+```ocaml
 module CL = struct
   type t = char list
   let compare = compare
@@ -127,7 +126,7 @@ Whew, that was some boilerplate code.  In this follow-up, we're now told that di
 
 Luckily, we added support for a custom mapping of `char list`s to `int` values.  So, we can take our solution to Part 1, add a few key-value mappings, and run it again!
 
-```ml
+```ocaml
 let digit_word_mappings =
   digit_mappings
   |> CLMap.add (char_list_of_string "one") 1
