@@ -1,7 +1,7 @@
 +++
 title="Day 6: Wait For It"
 date=2023-12-06T00:00:00-05:00
-draft=true
+draft=false
 toc=false
 tags=["aoc", "ocaml", "dev"]
 layout="aoc"
