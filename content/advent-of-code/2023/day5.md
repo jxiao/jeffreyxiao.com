@@ -1,7 +1,7 @@
 +++
 title="Day 5: If You Give A Seed A Fertilizer"
 date=2023-12-05T00:00:00-05:00
-draft=true
+draft=false
 toc=false
 tags=["aoc", "ocaml", "dev"]
 layout="aoc"
