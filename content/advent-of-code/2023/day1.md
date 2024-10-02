@@ -1,7 +1,7 @@
 +++
 title="Day 1: Trebuchet?!"
 date=2023-12-01T00:00:00-05:00
-draft=true
+draft=false
 toc=false
 tags=["aoc", "ocaml", "dev"]
 layout="aoc"
