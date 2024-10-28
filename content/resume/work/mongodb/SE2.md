@@ -7,4 +7,4 @@ skills= ["Java", "React"]
 section="work"
 +++
 
-Atlas Dedicated Team
+Atlas Dedicated / Security Team

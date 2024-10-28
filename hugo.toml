@@ -102,6 +102,10 @@ enableEmoji     = true
     name       = "About"
     url        = "/about"
   [[menu.main]]
+    identifier = "advent"
+    name       = "AoC"
+    url        = "/advent-of-code"
+  [[menu.main]]
     identifier = "bucketlist"
     name       = "Bucket List"
     url        = "/bucketlist"
