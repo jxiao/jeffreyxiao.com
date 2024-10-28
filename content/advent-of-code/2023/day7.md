@@ -1,7 +1,7 @@
 +++
 title="Day 7: Camel Cards"
 date=2023-12-07T00:00:00-05:00
-draft=false
+draft=true
 toc=false
 tags=["aoc", "ocaml", "dev"]
 layout="aoc"
