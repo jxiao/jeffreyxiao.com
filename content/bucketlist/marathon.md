@@ -3,13 +3,13 @@ title = 'Run a Marathon'
 date = 2024-02-16
 start = 2024-02-16
 draft = false
-status = "to do"
+status = "in progress"
 categories = ["fitness"]
 tags = ["running", "marathon"]
 +++
 
-2024 is the year for half-marathons.  2025 is the year for full marathons.
+## April 2025 - Jersey City Marathon
+- Gunning for a [BQ time](https://www.baa.org/races/boston-marathon/qualify)
 
-## 2025
-- [ ] TCS NYC Marathon
-  - Guaranteed entry as part of the [2024 9+1 Program](/bucketlist/9-plus-1-2024).
+## November 2025 - NYC Marathon
+- Guaranteed entry as part of the [2024 9+1 Program](/bucketlist/9-plus-1-2024).
