@@ -2,7 +2,7 @@
 title="About"
 +++
 
-Hi! My name is Jeffrey, and I'm a recent alum of the [University of Pennsylvania](https://www.upenn.edu/) where I studied [Computer Science](https://www.cis.upenn.edu/).  Right now, I work at [MongoDB](https://www.mongodb.com/) as a member of the Atlas Clusters team.
+Hi! My name is Jeffrey, and I'm a recent alum of the [University of Pennsylvania](https://www.upenn.edu/) where I studied [Computer Science](https://www.cis.upenn.edu/).  Right now, I work at [Scale AI](https://scale.com/) as a Forward Deployed Engineer in the [Enterprise](https://scale.com/enterprise) org. Previously, I worked at [MongoDB](https://www.mongodb.com/) as a member of the Atlas Clusters team, focusing on data plane security initiatives.
 
 Outside of work, I enjoy solving puzzles (like [Advent of Code](/advent-of-code/), which I will try to keep up to date) and [running around NYC](https://www.strava.com/athletes/127876262).  I'm building this site while learning the Hugo framework, with plenty of design inspiration coming from [Davis Haupt](https://davi.sh/) and [Peyton Walters](https://pawa.lt/)' own personal sites.  
 
